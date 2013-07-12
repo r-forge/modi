@@ -1,0 +1,82 @@
+\inputencoding{latin1}
+\HeaderA{TRC}{Transformed rank correlations for multivariate outlier detection}{TRC}
+\keyword{robust}{TRC}
+\keyword{multivariate}{TRC}
+\keyword{survey}{TRC}
+%
+\begin{Description}\relax
+TRC starts from bivariate Spearman correlations and obtains a positive definite covariance matrix by 
+back-transforming robust univariate medians and mads of the eigenspace. TRC can cope with missing values by a 
+regression imputation using the a robust regression on the best predictor and it takes sampling weights into account.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+TRC(data, weights, overlap = 3, mincor = 0, robust.regression = "rank", gamma = 0.5, prob.quantile = 0.75, alpha = 0.05, md.type = "m", monitor = F)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] a data frame or matrix with the data
+\item[\code{weights}] sampling weights
+\item[\code{overlap}] minimum number of jointly observed values for calculating the rank correlation
+\item[\code{mincor}] minimal absolute correlation to impute
+\item[\code{robust.regression}] type of regression: "irls" is iteratively reweighted least squares M-estimator, "rank" is 
+based on the rank correlations
+\item[\code{gamma}] minimal number of jointly observed values to impute
+\item[\code{prob.quantile}] if mads are 0 try this quantile of absolute deviations
+\item[\code{alpha}] \code{(1-alpha)} Quantile of F-distribution is used for cut-off
+
+\item[\code{md.type}] Type of Mahalanobis distance when missing values occur: "m" marginal (default), "c" conditional
+\item[\code{monitor}] if \code{TRUE} verbose output
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+TRC is similar to a one-step OGK estimator where the starting covariances are obtained from rank correlations and an 
+ad hoc missing value imputation plus weighting is provided.
+\end{Details}
+%
+\begin{Value}
+The output of TRC is stored in two global variables \code{TRC.r} and \code{TRC.i}. \code{TRC.r} contains the following components:
+\begin{ldescription}
+\item[\code{sample.size }] number of observations
+\item[\code{number.of.variables}] number of variables
+\item[\code{number.of.missing.items}] number of missing values
+\item[\code{significance.level}] \code{1-alpha}
+\item[\code{computation.time}] elapsed computation time
+\item[\code{medians}] componentwise medians
+\item[\code{mads}] componentwise mads
+\item[\code{center}] location estimate
+\item[\code{scatter}] covariance estimate
+\item[\code{robust.regression}] input parameter
+\item[\code{md.type}] input parameter
+\item[\code{cutpoint}] The threshold MD-value for the cut-off of outliers
+
+\end{ldescription}
+\code{TRC.i} contains two vectors of length \code{nrow(data)}:
+
+\begin{ldescription}
+\item[\code{outind}] Indicator of outliers
+\item[\code{dist}] Mahalanobis distances (with missing values)
+\end{ldescription}
+\end{Value}
+%
+\begin{Author}\relax
+ Beat Hulliger
+\end{Author}
+%
+\begin{References}\relax
+B\bsl{}'eguin, C., and Hulliger, B. (2004). Multivariate oulier detection in
+incomplete survey data: The epidemic algorithm and transformed
+rank correlations. Journal of the Royal Statistical Society, A
+167(Part 2.), 275-294. 
+\end{References}
+%
+\begin{Examples}
+\begin{ExampleCode}
+data(bushfirem,bushfire.weights)
+TRC(bushfirem,weights=bushfire.weights)
+\end{ExampleCode}
+\end{Examples}

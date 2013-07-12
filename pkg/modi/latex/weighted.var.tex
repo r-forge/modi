@@ -1,0 +1,48 @@
+\inputencoding{latin1}
+\HeaderA{weighted.var}{Weighted univariate variance coping with missing values}{weighted.var}
+%
+\begin{Description}\relax
+This function is as weighted.mean. The squares are weighted with w and the divisor is sum(w)-1. 
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+weighted.var(x, w, na.rm = FALSE)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] a vector with data
+\item[\code{w}] positive weights
+\item[\code{na.rm}] if \code{TRUE} remove missing values
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+\begin{ldescription}
+\item[\code{comp1 }] Description of 'comp1'
+\item[\code{comp2 }] Description of 'comp2'
+\end{ldescription}
+\end{Value}
+%
+\begin{Author}\relax
+Beat Hulliger
+\end{Author}
+%
+\begin{References}\relax
+ \textasciitilde{}put references to the literature/web site here \textasciitilde{} 
+\end{References}
+%
+\begin{SeeAlso}\relax
+See Also as \code{\LinkA{weighted.mean}{weighted.mean}}
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+x<-rnorm(100)
+x[sample(1:100,20)]<-NA
+w<-rchisq(100,2)
+weighted.var(x,w,na.rm=TRUE)
+\end{ExampleCode}
+\end{Examples}

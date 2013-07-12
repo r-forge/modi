@@ -1,0 +1,53 @@
+\inputencoding{latin1}
+\HeaderA{winsimp}{Winsorization followed by imputation}{winsimp}
+\keyword{robust}{winsimp}
+\keyword{multivariate}{winsimp}
+\keyword{survey}{winsimp}
+%
+\begin{Description}\relax
+Winsorisation of outliers according to the Mahalanobis distance followed by an imputation under the multivariate normal model.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+winsimp(data, center, scatter, outind, seed = 1000003)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] Data frame with the data
+\item[\code{center}] (Robust) estimate of the center (location) of the observations
+\item[\code{scatter}] (Robust) estimate of the scatter (covariance-matrix) of the observations
+\item[\code{outind}] Logical vector indicating outliers with 1 or TRUE for outliers
+\item[\code{seed}] Seed for random number generator
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Details}\relax
+It is assumed that \code{center}, \code{scatter} and \code{outind} stem from a multivariate outlier detection algorithm which produces robust estimates and which declares outliers observations with a large Mahalanobis distance. The winsorization reduces the weight of the outliers. The cutpoint is calculated as the least Mahalanobis distance among the outliers. 
+\end{Details}
+%
+\begin{Value}
+The result are saved in winsimp.r and the imputed data is in winsimp.i.
+\end{Value}
+%
+\begin{Author}\relax
+Beat Hulliger
+\end{Author}
+%
+\begin{References}\relax
+Hulliger, B. (2007) Multivariate Outlier Detection and Treatment in Business Surveys, Proceedings of the III International Conference on Establishment Surveys, Montr\bsl{}'eal.
+\end{References}
+%
+\begin{SeeAlso}\relax
+Uses \code{\LinkA{imp.norm}{imp.norm}} from the \code{\LinkA{norm}{norm}} package.
+\end{SeeAlso}
+%
+\begin{Examples}
+\begin{ExampleCode}
+data(bushfirem,bushfire.weights)
+TRC(bushfirem,weight=bushfire.weights)
+bushfire.imp<-winsimp(bushfirem,TRC.r$center,TRC.r$scatter,TRC.i$outind)
+\end{ExampleCode}
+\end{Examples}

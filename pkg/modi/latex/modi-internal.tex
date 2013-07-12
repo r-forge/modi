@@ -1,0 +1,103 @@
+\inputencoding{latin1}
+\HeaderA{modi-internal}{Internal Functions of modi-package}{modi.Rdash.internal}
+\keyword{survey}{modi-internal}
+\keyword{robust}{modi-internal}
+\keyword{multivariate}{modi-internal}
+%
+\begin{Description}\relax
+The \code{modi-package} contains eight internal functions. The internal functions are specifically built for the \code{modi-package} and are mainly used to improve efficiency and speed in the main functions of the package.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+Calculation of distances for Epidemic Algorithm for multivariate outlier detection and imputation
+.EA.dist(data,n,p,weights,reach,transmission.function, power, distance.type, maxl, monitor,calc.time)
+
+Non-zero non-missing minimum function
+.nz.min(x)
+
+Addressing function for Epidemic Algorithm
+.ind.dij(i, j, n)
+
+Addressing function for Epidemic Algorithm
+.ind.dijs(i, js, n)
+
+Sum of weights for observations < value (if lt=T) or observations=value (if lt=F)
+.sum.weights(observations,weights,value,lt=TRUE)
+
+Definition of the sweep and reverse-sweep operator
+.sweep.operator(M,k,reverse=FALSE) 
+
+psi-function (defined in Little and Smith for ER algorithm)
+.psi.lismi(d,present,psi.par=c(2,1.25))
+
+EM for multivariate normal data
+.EM.normal(data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id, S, T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F)
+
+ER for multivariate normal data
+.ER.normal(data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(data), s.counts, s.id, S, missing.items, nb.missing.items, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{data}] a data frame or matrix with the data
+\item[\code{n}] \code{nrow(data)}
+\item[\code{p}] \code{ncol(data)}
+\item[\code{weights}] a vector of positive sampling weights
+\item[\code{reach}] if \code{reach="max"} the maximal nearest neighbour distance is used as the basis for the 
+transmission function,  
+otherwise the weighted \code{(1-(p+1)/n)} quantile of the nearest neighbour distances is used.
+\item[\code{transmission.function}] form of the transmission function of distance \code{d}: 
+\code{"step"} is a heaviside function which jumps to \code{1} at \code{d0}, 
+\code{"linear"} is linear between \code{0} and \code{d0}, 
+\code{"power"} is \code{(beta*d+1)\textasciicircum{}(-p)} for \code{p=ncol(data)} as default, 
+\code{"root"} is the function \code{1-(1-d/d0)\textasciicircum{}(1/maxl)}
+\item[\code{power}] sets \code{p=power}
+\item[\code{maxl}] Maximum number of steps without infection
+\item[\code{monitor}] if \code{TRUE} verbose output on epidemic
+\item[\code{x}] vector of numeric values
+\item[\code{i}] index for row
+\item[\code{j}] index for column
+\item[\code{js}] vector of indices of columns
+\item[\code{observations}] Number of observations
+\item[\code{value}] an integer, indicating the threshold for the sum of weights computation
+\item[\code{lt}] if TRUE, sum of weights for observations < \code{value} is returned. If FALSE, sum of weights for observations = \code{value} is returned
+\item[\code{M}] an array, including a matrix
+\item[\code{k}] a vector giving the subscripts which the function will be applied over. E.g., for a matrix 1 indicates rows, 2 indicates columns
+\item[\code{reverse}] logical value
+\item[\code{s.counts}] counts of the different missingness patterns ordered alphabetically
+\item[\code{s.id}] indices of the last observation of each missingness pattern in the dataset ordered by missingness pattern
+\item[\code{S}] total number of different missingness patterns
+\item[\code{T.obs}] Sufficient statistics on complete observations
+\item[\code{start.mean}] starting value for mean vector
+\item[\code{start.var}] starting value for variance vector
+\item[\code{numb.it}] number of iterations
+\item[\code{Estep.output}] logical, TRUE if verbose output is desired
+\item[\code{psi.par}] further parameters passed to the psi-function
+\item[\code{np}] population size
+\item[\code{missing.items}] Indices of missing items
+\item[\code{nb.missing.items}] number of missing items
+\item[\code{tolerance}] stop iterations when change is below tolerance
+
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Author}\relax
+C\bsl{}'edric B\bsl{}'eguin, Beat Hulliger
+\end{Author}
+%
+\begin{References}\relax
+B\bsl{}'eguin, C., and Hulliger, B. (2004). Multivariate oulier detection in
+incomplete survey data: The epidemic algorithm and transformed
+rank correlations. Journal of the Royal Statistical Society, A
+167(Part 2.), 275-294.
+\end{References}
+%
+\begin{Examples}
+\begin{ExampleCode}
+data(bushfirem,bushfire.weights)
+EAdet(bushfirem,bushfire.weights)
+EAimp(bushfirem,mon=TRUE,kdon=3)
+\end{ExampleCode}
+\end{Examples}
