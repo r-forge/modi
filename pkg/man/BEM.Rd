@@ -53,7 +53,8 @@ The internal function \code{.EM.normal} is usually called from \code{BEM}. \code
    \item{outind}{Outlier indicator}
   \item{dist}{Final Mahalanobis distances}
 }
-\references{B\'eguin, C. and Hulliger, B. (2008) The BACON-EEM Algorithm for Multivariate Outlier Detection 
+\references{
+B\'{e}guin, C. and Hulliger, B. (2008) The BACON-EEM Algorithm for Multivariate Outlier Detection 
 in Incomplete Survey Data, \emph{Survey Methodology}, Vol. 34, No. 1, pp. 91-103.
 
 Billor, N., Hadi, A.S. and Vellemann, P.F. (2000). BACON: Blocked
