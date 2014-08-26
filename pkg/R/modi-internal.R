@@ -4,7 +4,7 @@ function(data, n,p,weights,reach,transmission.function, power, distance.type, ma
 # Calculation of distances for EPIDEMIC Algorithm for multivariate outlier detection and imputation
 # This is a utility for EAD and EAI
 # Modular programming by Beat Hulliger
-# 13.5.2009, 14.8.2009
+# 13.5.2009, 14.8.2009, 22.8.2014
 #
 # save distances, i.e. the latter counterprobabilities, as global vector
 	EA.distances <<- as.single(dist(data, method = distance.type))
@@ -25,8 +25,8 @@ function(data, n,p,weights,reach,transmission.function, power, distance.type, ma
 	}
 	# Save min.di and means.di for later inspection 
 	if(monitor) {
-		min.di <<- min.di
-		means.di <<- means.di
+		min.di <- min.di
+		means.di <- means.di
 	}
 #
 # Sample spatial median
@@ -95,17 +95,15 @@ function(data, n,p,weights,reach,transmission.function, power, distance.type, ma
 				}
 		}
 	}
-# main result is in global variable EA.distances
-# save minimal distances to nearest neighbour for inspection
-EA.min.di<<-min.di
-# save some additional derived parameters in a global vector
-EA.distances.parameters<<-c(sample.spatial.median.index,max.min.di,d0)
+cat("Counter-probabilities stored in global variable EA.distances\n")
+return(invisible(list(output=c(sample.spatial.median.index,max.min.di,d0),
+                      min.dist2nn=min.di)))
 }
 
 .nz.min <-
 function(x) {
 ############ Non-zero non-missing minimum function ############
-# Béguin,C. 2001
+# B?guin,C. 2001
 	     nz.min.temp <- min(x[x != 0], na.rm = T)
              if (is.infinite(nz.min.temp)) return(NA) else return(nz.min.temp)
              }
@@ -113,7 +111,7 @@ function(x) {
 .ind.dij <-
 function(i, j, n)
 	{############ Addressing function for Epidemic Algorithm ############
-# Béguin, C. 2001
+# B?guin, C. 2001
 
 		(i - 1) * n - ((i + 1) * i)/2 + j
 	}
@@ -121,7 +119,7 @@ function(i, j, n)
 .ind.dijs <-
 function(i, js, n)
 	{############ Addressing function for Epidemic Algorithm ############
-# Béguin, C. 2001
+# B?guin, C. 2001
 		indices <- c(.ind.dij(js[js < i], i, n), .ind.dij(i, js[js > i], n))
 		return(indices[!is.na(indices)])
 	}

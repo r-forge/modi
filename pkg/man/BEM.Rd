@@ -1,4 +1,3 @@
-\encoding{latin1}
 \name{BEM}
 \alias{BEM}
 %- Also NEED an '\alias' for EACH other topic documented here.
@@ -35,8 +34,7 @@ BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m", em.steps.start = 
 The internal function \code{.EM.normal} is usually called from \code{BEM}. \code{.EM.normal} is implementing the EM-algorithm in such a way that part of the calculations can be saved to be reused in the BEM algorithm. \code{.EM.normal} does not contain the computation of the observed sufficient statistics, they will be computed in the main program of \code{BEM} and passed as parameters as well as the statistics on the missingness patterns.
 }
 
-\value{
-  The output is stored in two global variables \code{BEM.r} and \code{BEM.i}. \code{BEM.r} contains the following components: 
+\value{\code{BEM} returns a list whose first component is the sub-list \code{output} with the following components: 
   \item{sample.size }{number of observations}
   \item{discarded.observations}{Number of discarded observations}
   \item{number.of.variables }{Number of variables}
@@ -49,7 +47,7 @@ The internal function \code{.EM.normal} is usually called from \code{BEM}. \code
   \item{scatter}{Final estimate of the covariance matrix}
   \item{cutpoint}{The threshold MD-value for the cut-off of outliers}
   
- \code{BEM.i} contains the following components:
+The further components returned by \code{BEM} are:
    \item{outind}{Outlier indicator}
   \item{dist}{Final Mahalanobis distances}
 }
@@ -73,7 +71,8 @@ Schafer J.L. (2000),
 \examples{
 # Bushfire data set with 20\% MCAR
 data(bushfirem,bushfire.weights)
-BEM(bushfirem,bushfire.weights,alpha=(1-0.01/nrow(bushfirem)))
+bem.res<-BEM(bushfirem,bushfire.weights,alpha=(1-0.01/nrow(bushfirem))) 
+print(bem.res$output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

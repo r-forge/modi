@@ -1,18 +1,20 @@
 EAimp <-
-function(data, weights , outind=EAdet.i$outind, 
-          duration=EAdet.r$duration, 
+function(data, weights , outind, 
+          duration=5, 
           maxl = 5, kdon=1, monitor = FALSE, threshold=FALSE, deterministic=TRUE, fixedprop=0 )
 {
 # EPIDEMIC Algorithm for Multivariate Outlier Detection
 #
-# Béguin, C. and Hulliger, B. (2004) Multivariate outlier detection in incomplete survey data: 
-# the epidemic algorithm and transformed rank correlations, JRSS-A, 167, Part 2, pp. 275–294.
+# B\'eguin, C. and Hulliger, B. (2004) Multivariate outlier detection in incomplete survey data: 
+# the epidemic algorithm and transformed rank correlations, JRSS-A, 167, Part 2, pp. 275?294.
 #
-# Program by Cédric Béguin and Beat Hulliger 
+# Program by C?dric B?guin and Beat Hulliger 
 # Created : Wednesday, January 24, 2001
-# Last modification : 4 August 2009 Beat Hulliger
-# Conversion to R from EA030313.ssc by Beat Hulliger (4.7.2003)
-# Modular programming and packaging: Beat Hulliger 27.3.2009 
+# Modifications : 4 August 2009 Beat Hulliger
+# 4.7.2003: Conversion to R from EA030313.ssc by Beat Hulliger
+# 27.3.2009: Modular programming and packaging: Beat Hulliger 
+# 23.8.2014: Output passed as function results
+#  
 # Copyright Swiss Federal Statistical Office and EUREDIT 2001-2006, FHNW 2007-2009
 # 
 # discrete: if TRUE changes the correction for missing values (instead of *(p/q) +(p-q) when summing (corresponds to corr=0.5)
@@ -43,7 +45,8 @@ function(data, weights , outind=EAdet.i$outind,
 	n <- nrow(data)
 	p <- ncol(data)
 	if (missing(weights)) weights<-rep(1,n)
-    response<-!is.na(data)
+  if (missing(outind)) cat("No outlier indicator is given\n")
+  response<-!is.na(data)
 	complete.records <- apply(response, 1, prod)
 	usable.records <- apply(response, 1, sum) >= p/2
 	cat("\n Dimensions (n,p):", n, p)
@@ -159,14 +162,14 @@ cat("\n\n Number of remaining missing values is ", sum(is.na(imp.data)))
 #
 ############ Results ############
 #
-	EAimp.r <<- list(sample.size = n, number.of.variables = p, n.complete.records = sum(complete.records), 
-		n.usable.records = sum(usable.records),durationa=duration,reach=d0, threshold=threshold, 
+	EAimp.r <- list(sample.size = n, number.of.variables = p, n.complete.records = sum(complete.records), 
+		n.usable.records = sum(usable.records),duration=duration,reach=d0, threshold=threshold, 
 		deterministic=deterministic, computation.time = calc.time)
-	EAimp.i<<-imp.data
+return(invisible(list(output=EAimp.r,imputed.data=imp.data)))
 #
 ############ Output ############
 #
 	cat("\n", "EA imputation has finished in", calc.time, "seconds.", "\n")
-		cat("The results are in EAimp.r and in EAimp.data \n")
+#		cat("The results are in EAimp.r and in EAimp.data \n")
 }
 

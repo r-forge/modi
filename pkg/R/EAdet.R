@@ -1,18 +1,19 @@
 EAdet <-
 function(data, weights ,reach="max", transmission.function = "root", power=ncol(data), distance.type = "euclidean", 
 	global.distances=FALSE, maxl = 5, plotting = TRUE, monitor = FALSE, prob.quantile = 0.9, 
-	random.start = FALSE, fix.start, threshold=FALSE, deterministic=TRUE, remove.missobs=FALSE)
+	random.start = FALSE, fix.start, threshold=FALSE, deterministic=TRUE, remove.missobs=FALSE, verbose=FALSE)
 {
 # EPIDEMIC Algorithm for Multivariate Outlier Detection
 #
-# Béguin, C. and Hulliger, B. (2004) Multivariate outlier detection in incomplete survey data: 
-# the epidemic algorithm and transformed rank correlations, JRSS-A, 167, Part 2, pp. 275–294.
+# B\'eguin, C. and Hulliger, B. (2004) Multivariate outlier detection in incomplete survey data: 
+# the epidemic algorithm and transformed rank correlations, JRSS-A, 167, Part 2, pp. 275?294.
 #
-# Program by Cédric Béguin and Beat Hulliger 
+# Program by C\'edric B\'eguin and Beat Hulliger 
 # Created : Wednesday, January 24, 2001
 # Last modification : 4 August 2009 Beat Hulliger
 # Conversion to R from EA030313.ssc by Beat Hulliger (4.7.2003)
-# Modular programming and packaging: Beat Hulliger 27.3.2009 
+# Modular programming and packaging: Beat Hulliger 27.3.2009
+# 22.8.2014 Output as objects
 # Copyright Swiss Federal Statistical Office and EUREDIT 2001-2006, FHNW 2007-2009
 ############ Dimensions ############
 #
@@ -37,10 +38,11 @@ if ((length(new.indices)<n) & remove.missobs)
 }
 	complete.records <- apply(!is.na(data), 1, prod)
 	usable.records <- apply(!is.na(data), 1, sum) >= p/2
-	cat("\n Dimensions (n,p):", n, p)
+	if (verbose) {cat("\n Dimensions (n,p):", n, p)
 	cat("\n Number of complete records ", sum(complete.records))
 	cat("\n Number of records with maximum p/2 variables missing ", sum(usable.records),"\n")
-	power <- as.single(power)
+	}
+  power <- as.single(power)
 #
 # Standardization of weights
 #
@@ -64,30 +66,32 @@ if ((length(new.indices)<n) & remove.missobs)
 		else data <- sweep(data, 2, qads, "/")
 	}
 	else data <- sweep(data, 2, mads, "/")
-	if(monitor) {
-		standardized.data <<- data
-	      cat("\n memory use after standardisation: ",memory.size())
-	}
+#	if(monitor) {
+#		standardized.data <<- data
+#	      cat("\n memory use after standardisation: ",memory.size())
+#	}
 # Calculation of distances
 if (global.distances==T) {
-	EA.dist.par<-EA.distances.parameters
+	EA.dist.res<-EA.distances.parameters
      cat("\n\n Global variable EA.distances used")
 } else {
-	EA.dist.par<-.EA.dist(data, n=n,p=p,weights = weights,reach=reach,
+	EA.dist.res<-.EA.dist(data, n=n,p=p,weights = weights,reach=reach,
 				transmission.function = transmission.function, power=power, distance.type = distance.type, 
 				maxl = maxl, monitor = monitor,calc.time=calc.time)
-	cat("\n\n Distances finished")
+	if (monitor) cat("\n\n Distances finished")
 }
 # The distances calculated by EA.dist are the counterprobabilities in single precision. 
 # These counterprobabilities are stored as a global variable EA.distances to avoid copying this very large vector.
-if (monitor) cat("\n memory use after distances: ",memory.size())
-cat("\n Index of sample spatial median is ",EA.dist.par[1])
-cat("\n Maximal distance to nearest neighbor is ", EA.dist.par[2])
-cat("\n Transmission distance is ", EA.dist.par[3], "\n")
+if (monitor) {
+cat("\n memory use after distances: ",memory.size())
+cat("\n Index of sample spatial median is ",EA.dist.res$output[1])
+cat("\n Maximal distance to nearest neighbor is ", EA.dist.res$output[2])
+cat("\n Transmission distance is ", EA.dist.res$output[3], "\n")
+}
 #
 ############ Initialisation ############
 # 
-	cat("\n\n Initialisation of epidemic")
+	if (verbose) cat("\n\n Initialisation of epidemic")
 	comp.time.init <- proc.time()[1] - calc.time
 	if(monitor)
 		cat("\n Initialisation time is ", comp.time.init)
@@ -96,7 +100,7 @@ cat("\n Transmission distance is ", EA.dist.par[3], "\n")
 	else {
 		if(!missing(fix.start))
 			start.point <- fix.start
-		else start.point <- EA.dist.par[1]
+		else start.point <- EA.dist.res$output[1]
 	}
 	time <- 1
 	infected <- rep(F, n)
@@ -150,7 +154,7 @@ cat("\n Transmission distance is ", EA.dist.par[3], "\n")
 	duration <- max(infection.time)
 	if(monitor) {
 		last.infection.prob <<- 1 - hprod
-		cat("\n memory use after epidemic: ",memory.size())
+		if (verbose) 	cat("\n memory use after epidemic: ",memory.size())
 	}
 # 
 ############ Impute infection.time for not infected #############
@@ -162,10 +166,10 @@ cat("\n Transmission distance is ", EA.dist.par[3], "\n")
 	calc.time <- round(proc.time()[1] - calc.time, 5)
         med.infection.time <- weighted.quantile(infection.time,weights,0.5)
 	mad.infection.time <- weighted.quantile(abs(infection.time-med.infection.time),weights,0.5)
-	cat("\n med and mad of infection times: ",med.infection.time," and ",mad.infection.time)
+  if (verbose) cat("\n med and mad of infection times: ",med.infection.time," and ",mad.infection.time)
 	if (mad.infection.time==0) mad.infection.time <- med.infection.time
 	cutpoint <- min(med.infection.time+3*mad.infection.time,duration)
-	cat("\n Proposed cutpoint is ",min(cutpoint,duration))
+  if (verbose) cat("\n Proposed cutpoint is ",min(cutpoint,duration))
         outlier.ind <- as.numeric(rownames(data))[which(infection.time>=cutpoint)]
 # Blowing up to full length
 infectedn<-logical(n)
@@ -178,16 +182,15 @@ outlier<-time>=cutpoint
 #
 ############ Results ############
 #
-	EAdet.r <<- list(sample.size = n, discarded.observations=discarded, 
+	EAdet.r <- list(sample.size = n, discarded.observations=discarded, 
 	                 number.of.variables = p, n.complete.records = sum(complete.records), 
 		n.usable.records = sum(usable.records), medians = medians, mads = mads, prob.quantile = prob.quantile, 
 		quantile.deviations = qads, start = start.point, transmission.function = transmission.function, power=power,
 		maxl=maxl,
-		min.nn.dist=EA.dist.par[2],	transmission.distance = EA.dist.par[3], threshold=threshold, distance.type = distance.type, 
+		min.nn.dist=EA.dist.res$output[2],	transmission.distance = EA.dist.res$output[3], threshold=threshold, distance.type = distance.type, 
 		deterministic=deterministic, number.infected = n.infected, 
                 cutpoint=cutpoint, number.outliers=sum(outlier), outliers=outlier.ind,
 		duration = duration, computation.time = calc.time, initialisation.computation.time = comp.time.init)
-	EAdet.i <<- list(infected = infectednfull, time = time, outind=outlier)
 # plotting
 	    if(plotting) {ord <- order(infection.time)
 		plot(infection.time[ord],cumsum(weights[ord]), ylab = "cdf of infection time")
@@ -196,6 +199,8 @@ outlier<-time>=cutpoint
 ############ Output ############
 #
 	cat("\n", "EA detection has finished with", n.infected, "infected points in", calc.time, "seconds.")
-		cat("\n The results are in EAdet.r and EAdet.i", "\n")
+	#	cat("\n The results are in EAdet.r and EAdet.i", "\n")
+return(invisible(list(output=EAdet.r,
+            infected = infectednfull, time = time, outind=outlier)))
 }
 

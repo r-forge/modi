@@ -1,4 +1,4 @@
-\name{EA}
+\name{EAdet}
 \title{Epidemic Algorithm for detection of multivariate outliers in incomplete survey data.}
 \alias{EAdet}
 \description{
@@ -7,7 +7,7 @@
   The last points infected are outliers. After running EAdet an imputation with EAimp may be run. 
   }
 \usage{
-EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), distance.type = "euclidean", global.distances = F, maxl = 5, plotting = T, monitor = F, prob.quantile = 0.9, random.start = F, fix.start, threshold = F, deterministic = TRUE, remove.missobs=FALSE)
+EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), distance.type = "euclidean", global.distances = F, maxl = 5, plotting = T, monitor = F, prob.quantile = 0.9, random.start = F, fix.start, threshold = F, deterministic = TRUE, remove.missobs=FALSE,verbose=F)
 }
 \arguments{
   \item{data}{a data frame or matrix with the data}
@@ -33,15 +33,18 @@ EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol
   \item{deterministic}{if \code{TRUE} the number of infections is the expected number and 
   the infected observations are the ones with largest infection probabilities.}
   \item{remove.missobs}{Set \code{remove.missobs} to \code{TRUE} if completely missing observations should be discarded. This has to done actively as a safeguard to avoid mismatches when imputing.} 
+  \item{verbose}{More output.}
 }
 \details{
   The form and parameters of the transmission function should be chosen such that the infection times have 
   at least a range of 10. The default cutting point to decide on outliers is the median infection time plus three times 
   the mad of infection times. A better cutpoint may be chosen by visual inspection of the cdf of infection times. 
+
+\code{EAdet} with \code{global.distances=F} calls the function \code{EA.dist}, which stores the counterprobabilities of infection in a global variable \code{EA.distances} and three parameters (sample spatial median index, maximal distance to nearest neighbor and transmission distance=reach) in \code{EA.distances.parameters} (The distances vector often is too large to be passed as arguments). 
 }
 \value{
-EAdet with \code{global.distances=F} calls the function EA.dist, which stores the counterprobabilities of infection in a global variable \code{EA.distances} and three parameters (sample spatial median index, maximal distance to nearest neighbor and transmission distance=reach) in \code{EA.distances.parameters}.  For EAdet the result is stored in two global variables: \code{EAdet.r} and \code{EAdet.i}. 
-\code{EAdet.r} has the following components:
+ \code{EAdet} returns a list whose first component \code{output} is a sub-list with the following components:
+
 \item{sample.size}{Number of observations}
 \item{discarded.ovbservations}{Number of discarded observations}
 \item{number.of.variables}{Number of variables}
@@ -68,7 +71,7 @@ EAdet with \code{global.distances=F} calls the function EA.dist, which stores th
 \item{computation.time}{Elapsed computation time}
 \item{initialisation.computation.time}{Elapsed compuation time for standardisation and calculation of distance matrix}
 
-\code{EAdet.i} contains two vectors of length \code{nrow(data)}:
+The further components returned by \code{EAdet} are:
 
   \item{infected}{Indicator of infection}
   \item{infection.time}{Time of infection}
@@ -80,10 +83,11 @@ incomplete survey data: The epidemic algorithm and transformed
 rank correlations. Journal of the Royal Statistical Society, A
 167(Part 2.), 275-294.}
 \author{Beat Hulliger}
+\seealso{\code{\link{EAimp}} for imputation with the Epidemic Algorithm.}
 \examples{
 data(bushfirem,bushfire.weights)
-EAdet(bushfirem,bushfire.weights)
-EAimp(bushfirem,mon=TRUE,kdon=3)
+det.res<-EAdet(bushfirem,bushfire.weights)
+print(det.res$output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

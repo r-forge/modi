@@ -1,6 +1,11 @@
 BEM <-
 function(data,weights,v=2,c0=3,alpha=0.01,md.type="m",em.steps.start=10,em.steps.loop=5,better.estimation=F,monitor=F)
 {
+# BACON-EEM Algorithm for multivariate outlier detection in incomplete survey data.
+# C. B\'eguin, B. Hulliger
+# EUREDIT and AMELI projects FP5 and FP7
+# 22.8.2014 Output as function result
+#
 ##################  Preprocessing of the data  ##################
 if (!is.matrix(data)) data<-as.matrix(data)
 n <- nrow(data)
@@ -482,7 +487,7 @@ if (monitor) cat("End of missingness statistics\n")
 #
 ################## Results ##################
 #
-    BEM.r <<- list(sample.size = n,
+    BEM.r <- list(sample.size = n,
 					discarded.observations=discarded,
                     number.of.variables = p,
                     significance.level = alpha,
@@ -493,11 +498,12 @@ if (monitor) cat("End of missingness statistics\n")
                     center = EM.mean.good,
                     scatter = EM.var.good,
 					cutpoint=cutpoint)
-   BEM.i <<- list(outind = outnfull,dist = distnfull)              
+   BEM.i <- list(outind = outnfull,dist = distnfull)              
 #
 ################## Output ##################
 #
    cat("\n","BEM has detected",length(outliers),"outlier(s) in",calc.time,"seconds.","\n","\n")
-    cat(" The results are in BEM.r and BEM.i","\n")
+#    cat(" The results are in BEM.r and BEM.i","\n")
+return(invisible(list(output=BEM.r,outind=outnfull,dist=distnfull)))
 }
 

@@ -4,18 +4,19 @@ function(data,weights,overlap=3,mincor=0,
 {
 # Multivariate Outlier Detection in Survey Data
 # TRC algorithm as described in:
-# Béguin, C. and Hulliger B., (2002),
+# B\'eguin, C. and Hulliger B., (2002),
 # EUREDIT Workpackage x.2 D4-5.2.1-2.C
 # Develop and evaluate new methods for statistical outlier 
 # detection and outlier robust multivariate imputation,
 # Technical report, EUREDIT 2002.
 # 
-# Program by Cédric Béguin
+# Program by C. B\'eguin
 # Modification : 27 March 2003 (Beat Hulliger) (R-Version of TRC030313.ssc)
 # Modification : 22 December 2005 (Beat Hulliger) Correct standardization of rank correlations if no imputation
 # Modification : 16 February 2006 (Beat Hulliger) Correct ordering if p=2
 # Modification : 30 March 2006 (Beat Hulliger) default md.type="m", default robust.regression="rank"
-# Note; The data is not standardised to unit scales.
+# 22.8.2014: Output as result of function
+#  Note; The data is not standardised to unit scales.
 # Copyright : Swiss Federal Statistical Office, 2002
 # gamma: minimal overlap of variables for regression
 # robust.regression: type of regression "irls" or based on rank correlation
@@ -242,7 +243,7 @@ function(data,weights,overlap=3,mincor=0,
 #
 ############ Results ############
 #
-	TRC.r <<- list(sample.size = n, 
+	TRC.r <- list(sample.size = n, 
 				number.of.variables = p, 
 				number.of.missing.items=nb.missing.items,
 				significance.level = alpha, 
@@ -253,12 +254,11 @@ function(data,weights,overlap=3,mincor=0,
 				robust.regression=robust.regression,
 				md.type=md.type,
                 cutpoint=cutpoint)
-     TRC.i <<- list(outind = outnfull, 
-				dist = distnfull)
 #
 ############ Output ############
 #
 	cat("\n", "TRC has detected", length(outliers), "outlier(s) in", calc.time[1], "seconds.\n\n")
-	cat(" The results are in TRC.r and TRC.i","\n")
+return(invisible(list(ouput=TRC.r,outind = outnfull, 
+                      dist = distnfull)))
 }
 

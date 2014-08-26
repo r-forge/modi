@@ -2,7 +2,7 @@
 \alias{TRC}
 \title{Transformed rank correlations for multivariate outlier detection}
 \description{
-  TRC starts from bivariate Spearman correlations and obtains a positive definite covariance matrix by 
+  \code{TRC} starts from bivariate Spearman correlations and obtains a positive definite covariance matrix by 
    back-transforming robust univariate medians and mads of the eigenspace. TRC can cope with missing values by a 
    regression imputation using the a robust regression on the best predictor and it takes sampling weights into account.
 }
@@ -28,7 +28,7 @@ TRC(data, weights, overlap = 3, mincor = 0, robust.regression = "rank", gamma = 
 TRC is similar to a one-step OGK estimator where the starting covariances are obtained from rank correlations and an 
 ad hoc missing value imputation plus weighting is provided.
 }
-\value{The output of TRC is stored in two global variables \code{TRC.r} and \code{TRC.i}. \code{TRC.r} contains the following components:
+\value{\code{TRC} returns a list whos first component \code{output} is a sublist with the follosing components: 
   \item{sample.size }{number of observations}
   \item{number.of.variables}{number of variables}
   \item{number.of.missing.items}{number of missing values}
@@ -42,7 +42,7 @@ ad hoc missing value imputation plus weighting is provided.
   \item{md.type}{input parameter}
   \item{cutpoint}{The threshold MD-value for the cut-off of outliers}
 
-\code{TRC.i} contains two vectors of length \code{nrow(data)}:
+The further components returned by \code{TRC} are:
 	
 	\item{outind}{Indicator of outliers}
 	\item{dist}{Mahalanobis distances (with missing values)}
@@ -55,7 +55,8 @@ rank correlations. Journal of the Royal Statistical Society, A
 
 \examples{
 data(bushfirem,bushfire.weights)
-TRC(bushfirem,weights=bushfire.weights)
+det.res<-TRC(bushfirem,weights=bushfire.weights)
+print(det.res)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
