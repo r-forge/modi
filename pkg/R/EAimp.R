@@ -1,7 +1,9 @@
 EAimp <-
-function(data, weights , outind, 
+function(data, weights , outind, reach,
           duration=5, 
-          maxl = 5, kdon=1, monitor = FALSE, threshold=FALSE, deterministic=TRUE, fixedprop=0 )
+          maxl = 5, kdon=1, 
+         monitor = FALSE, 
+         threshold=FALSE, deterministic=TRUE, fixedprop=0 )
 {
 # EPIDEMIC Algorithm for Multivariate Outlier Detection
 #
@@ -18,21 +20,16 @@ function(data, weights , outind,
 # Copyright Swiss Federal Statistical Office and EUREDIT 2001-2006, FHNW 2007-2009
 # 
 # discrete: if TRUE changes the correction for missing values (instead of *(p/q) +(p-q) when summing (corresponds to corr=0.5)
-# reach: Transmission.distance. reach=0 yields maximal distance. Default is 1-(p+1)/n quantile of minimal distance to nearest neighbor
-# usable.only: Sets observations with more than half the variables missing to all missing (never infected)
-# transmission.function: "step", "linear", "power" or "root"
-# tf.const: constant for transmission functions power (default=p) and root (default=maxl).
-# distance type: The types for function dist()
+# reach: Transmission.distance. 
 # maxl: Maximum number of steps without change (finish)
-# prob.quantile: If mads fail then take this quantile absolute deviation of abs. deviations
 # threshold: Infect all points with probability above 1-0.5^(1/maxl)
 # fixedprop: Fixed proportion to be infected
 # deterministic: Infect points with largest prob. (expected number)
 # outind: a logical vector with TRUE if an outlier.
 #
 # EAdet must have been run before in order to calculate the distances and counterprobabilities. 
-# EAdet stores the counterprobabilities in a global vector EA.distances and 
-# some parameters in EA.distances.parameters. EAimp uses these counterprobabilities and parameters. 
+# EAdet stores the counterprobabilities in a global vector EA.distances  
+# EAimp uses these counterprobabilities. 
 # No changes to the transmission function are possible in EAimp.
 #
 ############ Computation time start ############
@@ -60,7 +57,6 @@ function(data, weights , outind,
 #
 # Distances, i.e. counterprobabilities, must have been stored in a global variable EA.distances
 #
-   EA.dist.par<-EA.distances.parameters
    cat("\n\n Global variable EA.distances used")
    if (length(EA.distances)!=n*(n-1)/2) cat("\n Distances not on same number of observations")
 #
@@ -74,7 +70,7 @@ function(data, weights , outind,
   n.imp<-length(imp.ind)
   cat("\n Number of imputands is ",n.imp)
   # reach d0 is set to maximum in order to reach all outliers (max.min.di of .EA.dist)
-  d0 <- EA.dist.par[2]
+  d0 <- reach
   cat("\n Reach for imputation is ",d0)
 #
 # Start of imputations
@@ -134,7 +130,7 @@ function(data, weights , outind,
 		if (deterministic) {
 			n.to.infect <- max(1,round(sum(1 - hprod[!imp.infected]))) # At least 1 infection at each step
                   # Rank is maximum to allow infection
-			imp.infected[!imp.infected] <- rank(1 - hprod[!imp.infected],ties="max")>=n-n.imp.infected-n.to.infect
+			imp.infected[!imp.infected] <- rank(1 - hprod[!imp.infected],ties.method="max")>=n-n.imp.infected-n.to.infect
 		} else {
 			if (threshold) {imp.infected[!imp.infected] <- hprod[!imp.infected]<=0.5^(1/maxl)} else {
 				if (fixedprop>0) {

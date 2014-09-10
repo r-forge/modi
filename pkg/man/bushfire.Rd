@@ -10,7 +10,7 @@ The dataset contains satelite measurements on five frequency bands, correspondin
 }
 \usage{data(bushfire)}
 \format{
-  A data frame with 38 observations on the 5 variables.
+  A data frame with 38 observations on 5 variables.
 }
 \details{
 The data contains an outlying cluster of

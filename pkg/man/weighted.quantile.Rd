@@ -16,9 +16,9 @@ weighted.quantile(x, w, prob = 0.5, plot = FALSE)
   \item{plot}{if \code{TRUE} the weighted cdf is plotted}
 }
 \details{
-Weighted linear interpolation in case of non-unique inverse. Gives a warning when one observation accounts for prob.
+Weighted linear interpolation in case of non-unique inverse. Gives a warning when the contribution of the weight of the smallest observation to the total weight is larger than \code{prob}.
 }
-\value{The quantile.
+\value{The quantile for proporiont \code{prob}.
 }
 \author{Beat Hulliger}
 \note{No variance calculation. 

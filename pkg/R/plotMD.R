@@ -1,6 +1,6 @@
 plotMD<- function(dist,p, alpha=0.95)
 {
-# QQ-Plot of Mahalanobis Distance 
+# QQ-Plot of (squared) Mahalanobis Distance 
 	#dist[is.na(dist)]<-max(dist,na.rm=T) #set missing distances to max
 	dist<-dist[!is.na(dist)]
 	n <- length(dist)
@@ -12,4 +12,5 @@ plotMD<- function(dist,p, alpha=0.95)
         abline(h=halpha, lty=2)
         title(main="QQ-Plot of Mahalanobis distances vs. F-distribution")
         title ( sub=paste("alpha=",alpha,", hmed=",round(hmed,3),", halpha=",round(halpha,3)," n.miss.dist=",sum(is.na(dist))))
+  return(list(hmed=hmed,halpha=halpha))
 }

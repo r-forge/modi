@@ -19,7 +19,7 @@ winsimp(data, center, scatter, outind, seed = 1000003)
   \item{seed}{Seed for random number generator}
 }
 \details{
-It is assumed that \code{center}, \code{scatter} and \code{outind} stem from a multivariate outlier detection algorithm which produces robust estimates and which declares outliers observations with a large Mahalanobis distance. The winsorization reduces the weight of the outliers. The cutpoint is calculated as the least Mahalanobis distance among the outliers. 
+It is assumed that \code{center}, \code{scatter} and \code{outind} stem from a multivariate outlier detection algorithm which produces robust estimates and which declares outliers observations with a large Mahalanobis distance.  The cutpoint is calculated as the least (unsquared) Mahalanobis distance among the outliers. The winsorization reduces the weight of the outliers: \deqn{\hat y_i=\mu_R+(y_i-\mu_R)\cdot c/d_i}{y_i=\mu_R +(y_i-\mu_R)*c/d_i}, where \eqn{\mu_R} is the robust center and \eqn{d_i} is the (unsquared) Mahalanobis distance of observation i. 
 }
 \value{Function \code{winsimp} returns a list whose first component \code{output} is a sub-list with the follwing components:
 \item{cutpoint}{Cutpoint for outliers}
@@ -43,7 +43,7 @@ Uses \code{\link{imp.norm}} from the \code{\link{norm}} package.
 \examples{
 data(bushfirem,bushfire.weights)
 det.res<-TRC(bushfirem,weight=bushfire.weights)
-imp.res<-winsimp(bushfirem,det.res[[1]]$center,det.res[[1]]$scatter,det.res$outind)
+imp.res<-winsimp(bushfirem,det.res$output$center,det.res$output$scatter,det.res$outind)
 print(imp.res$output)
 }
 \keyword{robust}

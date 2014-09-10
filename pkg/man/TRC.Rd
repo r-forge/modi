@@ -28,7 +28,7 @@ TRC(data, weights, overlap = 3, mincor = 0, robust.regression = "rank", gamma = 
 TRC is similar to a one-step OGK estimator where the starting covariances are obtained from rank correlations and an 
 ad hoc missing value imputation plus weighting is provided.
 }
-\value{\code{TRC} returns a list whos first component \code{output} is a sublist with the follosing components: 
+\value{\code{TRC} returns a list whose first component \code{output} is a sublist with the following components: 
   \item{sample.size }{number of observations}
   \item{number.of.variables}{number of variables}
   \item{number.of.missing.items}{number of missing values}
@@ -40,7 +40,7 @@ ad hoc missing value imputation plus weighting is provided.
   \item{scatter}{covariance estimate}
   \item{robust.regression}{input parameter}
   \item{md.type}{input parameter}
-  \item{cutpoint}{The threshold MD-value for the cut-off of outliers}
+  \item{cutpoint}{The default threshold MD-value for the cut-off of outliers}
 
 The further components returned by \code{TRC} are:
 	
@@ -56,6 +56,7 @@ rank correlations. Journal of the Royal Statistical Society, A
 \examples{
 data(bushfirem,bushfire.weights)
 det.res<-TRC(bushfirem,weights=bushfire.weights)
+plotMD(det.res$dist,ncol(bushfirem))
 print(det.res)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

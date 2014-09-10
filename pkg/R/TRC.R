@@ -258,7 +258,7 @@ function(data,weights,overlap=3,mincor=0,
 ############ Output ############
 #
 	cat("\n", "TRC has detected", length(outliers), "outlier(s) in", calc.time[1], "seconds.\n\n")
-return(invisible(list(ouput=TRC.r,outind = outnfull, 
+return(invisible(list(output=TRC.r,outind = outnfull, 
                       dist = distnfull)))
 }
 

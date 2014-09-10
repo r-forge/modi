@@ -13,7 +13,7 @@ function(data,center,scatter,outind,seed=1000003)
 	calc.time <- proc.time()
 	
 outind<-as.logical(outind)
-# Mahalanobis distance
+# Mahalanobis distance (not squared)
 data.wins <- as.matrix(data)
 MD<-sqrt(MDmiss(data.wins,center,scatter))
 cutpoint<-min(MD[outind],na.rm=T)

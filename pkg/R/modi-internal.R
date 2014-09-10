@@ -2,7 +2,7 @@
 function(data, n,p,weights,reach,transmission.function, power, distance.type, maxl, monitor,calc.time)
 {
 # Calculation of distances for EPIDEMIC Algorithm for multivariate outlier detection and imputation
-# This is a utility for EAD and EAI
+# This is a utility for EAdet and EAimp
 # Modular programming by Beat Hulliger
 # 13.5.2009, 14.8.2009, 22.8.2014
 #
@@ -262,7 +262,7 @@ return(theta)
 
 .ER.normal <-
 function(data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(data), s.counts, s.id, S, missing.items, nb.missing.items,
-                            start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06)
+                            start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=FALSE,tolerance=1e-06)
 {
 #
 ################## Initialization ##################
@@ -275,7 +275,7 @@ theta[1,2:(p+1)] <- theta[2:(p+1),1] <- start.mean
 theta[2:(p+1),2:(p+1)] <- start.var
 if (Estep.output) cat("\n","theta: \n",theta)
 
-break.flag <<- F
+break.flag <- F
 #
 # Initialisation of robustness weights to 1
 #
@@ -286,7 +286,7 @@ np.hat <- np
 #
 for (boucle in 1:numb.it)
 {
-    if (Estep.output) cat("E-step ",boucle)
+    if (Estep.output) cat("\n E-step ",boucle)
     #
     ################## The E-step ##################
     #
@@ -368,12 +368,8 @@ for (boucle in 1:numb.it)
     # new robustness weights
     #
     rob.weights <- ifelse(dist>0,.psi.lismi(sqrt(dist),apply(!is.na(data),1,sum),psi.par=psi.par)/sqrt(dist),1)
-    ER.rob.weights <<- rob.weights
-    if (Estep.output) cat(" Delta: ", signif(max(abs(theta-old.theta)),8),"\n")
-    if (max(abs(theta-old.theta))<tolerance) {break.flag<<-T;break}
+    if (Estep.output) cat("\n Delta: ", signif(max(abs(theta-old.theta)),8),"\n")
+    if (max(abs(theta-old.theta))<tolerance) {break.flag<-T;break}
 }  
-# dist and weights passed as global variables
-temp.ER.dist<<-dist
-temp.ER.rob.weights <<-rob.weights
-return(theta)
+return(list(theta=theta,dist=dist,rob.weights=rob.weights,convergence=break.flag))
 }

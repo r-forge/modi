@@ -3,7 +3,7 @@
 \docType{data}
 \title{Sample Environment Protection Expenditure Survey}
 \description{
-The sepe data set is a sample of the pilot survey  in 1993 of the Swiss Federal Statistical Office on environment protection expenditures of Swiss private economy in the previous accounting year. The units are enterprises, the monetary variables are in thousand Swiss Francs (CHF). From the original sample a random subsample was chosen of which certain enterprises were excluded for confidentiality reasons. In addition, noise has been added to certain variables, and certain categories have been collapsed. The data set has missing values. The data set has first been prepared for the FP5 project EUREDIT and later been data protected for educational purposes.  
+The \code{sepe} data set is a sample of the pilot survey in 1993 of the Swiss Federal Statistical Office on environment protection expenditures of Swiss private economy in the previous accounting year. The units are enterprises, the monetary variables are in thousand Swiss Francs (CHF). From the original sample a random subsample was chosen of which certain enterprises were excluded for confidentiality reasons. In addition, noise has been added to certain variables, and certain categories have been collapsed. The data set has missing values. The data set has first been prepared for the EU FP5 project EUREDIT and later been data protected for educational purposes.  
 }
 \usage{data(sepe)}
 \format{
@@ -17,7 +17,10 @@ The sepe data set is a sample of the pilot survey  in 1993 of the Swiss Federal 
     \item{\code{totinvnp}}{total investment for noise protection}
     \item{\code{totinvot}}{total investement for other environmental protection areas}
     \item{\code{totinvto}}{overall total investment in all environmental protection areas}
-    \item{\code{totexpxx}}{total current expenditure in environmental protectiona area xx (see investement variables above)}
+    \item{\code{totexpwp}}{total current expenditure in environmental protectiona area water protection}
+        \item{\code{totexpwm}}{total current expenditure in environmental protectiona area waste management}    \item{\code{totexpap}}{total current expenditure in environmental protectiona area air protection}    \item{\code{totexpnp}}{total current expenditure in environmental protectiona area noise protection} 
+    \item{\code{totexpot}}{total current expenditure in other environmental protectiona }
+       \item{\code{totexpto}}{overall total current expenditure in all environmental protectiona}
     \item{\code{subtot}}{total subsidies for environmental protection received}
 	\item{\code{rectot}}{total receipts from environmental protection}
     \item{\code{employ}}{number of employees}

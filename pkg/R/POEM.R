@@ -5,13 +5,13 @@ function(data,weights,outind,errors,missing.matrix,alpha=0.5,beta=0.5,reweight.o
 # POEM Algorithm for multivariate weighted imPutation for Outliers, Edit failure and Missing values
 #
 # POEM algorithm as described in:
-# Béguin, C. and Hulliger B., (2002),
+# B?guin, C. and Hulliger B., (2002),
 # EUREDIT Workpackage x.2 D4-5.2.1-2.C
 # Develop and evaluate new methods for statistical outlier 
 # detection and outlier robust multivariate imputation,
 # Technical report, EUREDIT 2002.
 #
-# Program by Cédric Béguin
+# Program by C?dric B?guin
 # Last modified : 7 August 2009 (Beat Hulliger)
 # Adaptation to R 4.7.2003 (Beat Hulliger from POEM030402.ssc)
 # Copyright : Swiss Federal Statistical Office, 2002
@@ -210,28 +210,25 @@ new.variances <- apply(weights*sweep(new.data,2,new.center,"-")^2,2,sum)/sum(wei
 #
 ################## Results ##################
 #
-   POEM.r <<- list(
-        preliminary.mean.imputation=preliminary.mean.imputation,
-        size.of.data=dim(data),
+   POEM.r <- list(
+    preliminary.mean.imputation=preliminary.mean.imputation,
 		completely.missing=sum(comp.miss),
-		sum.of.weights=sum(weights), 
-        good.values=good.values,
-		response.per.variable=apply(missing.matrix,2,sum),
-		number.of.nonoutliers.before.reweighting=old.number.of.nonoutliers,
-		weighted.number.of.nonoutliers.before.reweighting=old.weighted.sum.of.nonoutliers,
+    good.values=good.values,
+		nonoutliers.before=old.number.of.nonoutliers,
+		weighted.nonoutliers.before=old.weighted.sum.of.nonoutliers,
 		number.of.nonoutliers.after.reweighting=sum(1-outind),
 		weighted.number.of.nonoutliers.after.reweighting=sum(weights*(1-outind)),
 		old.center=center, old.variances=variances,
-        new.center=new.center, new.variances=new.variances,
-        covariance=covariance,
+    new.center=new.center, new.variances=new.variances,
+    covariance=covariance,
 		imputed.observations = to.be.imputed,
 		donors = imputed[to.be.imputed],
 		outind = outind)
-   POEM.i <<- new.data
 #
 ################## Output ##################
 #
    cat("\n","POEM has imputed",length(to.be.imputed),"observations(s) in",calc.time,"seconds.","\n","\n")
-	cat(" The results are in POEM.r and POEM.i \n")
+#	cat(" The results are in POEM.r and POEM.i \n")
+return(invisible(list(output=POEM.r,imputed.data=new.data)))
 }
 

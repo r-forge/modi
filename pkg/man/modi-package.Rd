@@ -4,20 +4,20 @@
 \title{
 Multivariate outlier detection for incomplete survey data
 }
-\description{The package modi is a collection of functions for multivariate outlier dedection and imputation. 
+\description{The package \code{modi} is a collection of functions for multivariate outlier dedection and imputation. 
 The aim is to provide a set of functions which cope with missing values and take sampling weights into account. 
 The original functions were 
 developed in the EUREDIT project. This work was partially supported by the EU FP5 ICT programme, 
 the Swiss Federal Office of Education and Science and the Swiss Federal Statistical Office. 
 Subsequent development was in the AMELI project of the EU FP7 SSH Programme and also supported by the 
-University of Applied Sciences Northwestern Switzerland FHNW. 
+University of Applied Sciences and Arts Northwestern Switzerland (FHNW). 
 }
 \details{
 \tabular{ll}{
 Package: \tab modi\cr
 Type: \tab Package\cr
-Version: \tab 1.2\cr
-Date: \tab 2013-05-16\cr
+Version: \tab 1.4\cr
+Date: \tab 2014-09-10\cr
 License: \tab GPL-2\cr
 LazyLoad: \tab yes\cr
 }

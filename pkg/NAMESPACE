@@ -1,4 +1,5 @@
 exportPattern("^[^\\.]")
-import(MASS)
+import(MASS,norm)
+
 
 

@@ -1,5 +1,6 @@
 ER <-
-function(data,weights,alpha=0.01,psi.par=c(2,1.25),em.steps=100,steps.output=F,Estep.output=F)
+function(data,weights,alpha=0.01,psi.par=c(2,1.25),
+         em.steps=100,steps.output=F,Estep.output=F,tolerance=1e-6)
 {
 ##################  Preprocessing of the data  ##################
 #
@@ -73,17 +74,23 @@ if (steps.output) cat("End of missingness statistics\n")
             #
             # Case where all observations have missing items
             #
-               mean.start <- apply(data,2,weighted.mean.na,w=weights)
+               mean.start <- apply(data,2,weighted.mean,w=weights,na.rm=T)
                var.start <- diag(apply(data,2,weighted.var,w=weights,na.rm=T))
             }
-		if (steps.output) cat("\n","start.mean: ",mean.start,"\n","start.var: ",var.start)
+		if (steps.output) {
+      cat("\n","start.mean: ",mean.start,"\n","start.var: ")
+      print(var.start)
+      cat("\n")
+		}
             ER.result <- .ER.normal(data=data,weights,psi.par=psi.par,np=sum(weights),p=p,s.counts=s.counts,s.id=s.id,S,
-                                            missing.items=missing.items, nb.missing.items,
-                                            start.mean=mean.start,
-                                            start.var=var.start,numb.it=em.steps,Estep.output=Estep.output)
+                                    missing.items=missing.items, nb.missing.items,
+                                    start.mean=mean.start,
+                                    start.var=var.start,
+                                    numb.it=em.steps,Estep.output=Estep.output,
+                                    tolerance=tolerance)
 
-            ER.mean <- ER.result[1,2:(p+1)]
-            ER.var <- ER.result[2:(p+1),2:(p+1)]
+            ER.mean <- ER.result$theta[1,2:(p+1)]
+            ER.var <- ER.result$theta[2:(p+1),2:(p+1)]
 #
 ############ Computation time stop ############
 #
@@ -93,32 +100,26 @@ if (steps.output) cat("End of missingness statistics\n")
 #
 # Nominate the outliers using the original numbering
 #
-    dist <- temp.ER.dist # temp.ER.dist is passed as global variable
+    dist <- ER.result$dist 
     good <- dist <= qchisq(alpha,p)
     outliers <- perm[!good]
 #
 #
-################## Results ##################
-#
-    ER.r <<- list(sample.size = n,
-                        number.of.variables = p,
-                        significance.level = alpha,
-                        computation.time = calc.time,
-                        good.data = perm[good],
-                        outliers = outliers,
-                        center = ER.mean,
-                        scatter = ER.var,
-                        dist = dist[order(perm)],
-				robweights = temp.ER.rob.weights)              
-#
 ################## Output ##################
 #
    cat("\n","ER has detected",sum(!good),"outlier(s) in",calc.time,"seconds.","\n","\n")
-   if (!break.flag) cat("\n","ER did not converge.","\n")
-    cat(" The results are in ER.r$...","\n")
-    cat(" ... = sample.size, number.of.variable, significance.level,","\n")
-    cat("      initial.basic.subset.size, final.basic.subset.size,","\n")
-    cat("      number.of.iterations, computation.time, good.data,","\n")
-    cat("      outliers, center, scatter, dist.","\n","\n")
+   if (!ER.result$convergence) cat("\n","ER did not converge.","\n")
+################## Results ##################
+#
+return(list(sample.size = n,
+            number.of.variables = p,
+            significance.level = alpha,
+            computation.time = calc.time,
+            good.data = perm[good],
+            outliers = outliers,
+            center = ER.mean,
+            scatter = ER.var,
+            dist = dist[order(perm)],
+            rob.weights = ER.result$rob.weights))  
 }
 

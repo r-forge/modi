@@ -5,19 +5,20 @@
   After running EAdet an imputation of the detected outliers with EAimp may be run. 
 }
 \usage{
-EAimp(data, weights ,  outind, 
+EAimp(data, weights ,  outind, reach,
 duration = 5, maxl = 5, kdon = 1, monitor = FALSE, threshold = FALSE, deterministic = TRUE, fixedprop = 0)
 }
 \arguments{
   \item{data}{a data frame or matrix with the data}
   \item{weights}{a vector of positive sampling weights}
+  \item{outind}{a logical vecotr with component TRUE for outliers}
   \item{maxl}{Maximum number of steps without infection}
+  \item{reach}{reach of the threshold function (usually set to the maximum distance to a nearest neighbour, see internal function \code{.EA.dist})}
   \item{monitor}{if \code{TRUE} verbose output on epidemic}
   \item{threshold}{Infect all remaining points with infection probability above the threshold \code{1-0.5^(1/maxl)}}
   \item{deterministic}{if \code{TRUE} the number of infections is the expected number and 
   the infected observations are the ones with largest infection probabilities.} 
   \item{duration}{The duration of the detection epidemic}
-  \item{outind}{a boolean vector indicating outliers}
   \item{kdon}{The number of donors that should be infected before imputation}
   \item{fixedprop}{If \code{TRUE} a fixed proportion of observations is infected at each step}
 }
@@ -49,7 +50,8 @@ rank correlations. Journal of the Royal Statistical Society, A
 \examples{
 data(bushfirem,bushfire.weights)
 det.res<-EAdet(bushfirem,bushfire.weights)
-imp.res<-EAimp(bushfirem,bushfire.weights,outind=det.res$outind,kdon=3)
+imp.res<-EAimp(bushfirem,bushfire.weights,outind=det.res$outind,
+reach=det.res$output$max.min.di,kdon=3)
 print(imp.res$output)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

@@ -2,12 +2,12 @@
 \title{Epidemic Algorithm for detection of multivariate outliers in incomplete survey data.}
 \alias{EAdet}
 \description{
-  In EAdet an epidemic is started at a center of the data. 
-  The epidemic spreads out and infects neighbouring points (probabilistically or deterministiaclly). 
-  The last points infected are outliers. After running EAdet an imputation with EAimp may be run. 
+  In \code{EAdet} an epidemic is started at a center of the data. 
+  The epidemic spreads out and infects neighbouring points (probabilistically or deterministically). 
+  The last points infected are outliers. After running \code{EAdet} an imputation with \code{EAimp} may be run. 
   }
 \usage{
-EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), distance.type = "euclidean", global.distances = F, maxl = 5, plotting = T, monitor = F, prob.quantile = 0.9, random.start = F, fix.start, threshold = F, deterministic = TRUE, remove.missobs=FALSE,verbose=F)
+EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), distance.type = "euclidean", maxl = 5, plotting = TRUE, monitor = FALSE, prob.quantile = 0.9, random.start = FALSE, fix.start, threshold = FALSE, deterministic = TRUE, remove.missobs=FALSE,verbose=FALSE)
 }
 \arguments{
   \item{data}{a data frame or matrix with the data}
@@ -22,7 +22,6 @@ EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol
   \code{"root"} is the function \code{1-(1-d/d0)^(1/maxl)}}
   \item{power}{sets \code{p=power}}
   \item{distance.type}{distance type in function \code{dist()}}
-  \item{global.distances}{if \code{TRUE} uses the global distance stored in EA.distances instead, otherwise calculates the distances freshly}
   \item{maxl}{Maximum number of steps without infection}
   \item{plotting}{if \code{TRUE} the cdf of infection times is plotted}
   \item{monitor}{if \code{TRUE} verbose output on epidemic}

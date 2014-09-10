@@ -3,10 +3,10 @@
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{Robust EM-algorithm ER}
 \description{
-The ER function is an implementation of the ER-algorithm of Little and Smith (1987). 
+The \code{ER} function is an implementation of the ER-algorithm of Little and Smith (1987). 
 }
 \usage{
-ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), em.steps = 100, steps.output = F, Estep.output=F)
+ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), em.steps = 100, steps.output = F, Estep.output=F, tolerance=1e-6)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -17,12 +17,12 @@ ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), em.steps = 100, steps.outp
   \item{em.steps}{number of iteration steps of the EM-algorithm}
   \item{steps.output}{if \code{TRUE} verbose output}
   \item{Estep.output}{if \code{TRUE} estimators are output at each iteration}
+  \item{tolerance}{convergence criterion (relative change)}
 }
 \details{
 The M-step of the EM-algorithm uses a one-step M-estimator.
 }
 \value{
-  The output is stored in a global variable \code{ER.r} with components: 
   \item{sample.size }{number of observations}
   \item{number.of.variables }{Number of variables}
   \item{significance.level}{\code{alpha}}
@@ -32,7 +32,7 @@ The M-step of the EM-algorithm uses a one-step M-estimator.
   \item{center}{Final estimate of the center}
   \item{scatter}{Final estimate of the covariance matrix}
   \item{dist}{Final Mahalanobis distances}
-  \item{robweights}{Robustness weights in the final EM step}
+  \item{rob.weights}{Robustness weights in the final EM step}
 }
 \references{Little, R. and P. Smith (1987). 
 Editing and imputation for quantitative survey data.
@@ -44,7 +44,8 @@ Journal of the American Statistical Association, 82, 58-68.}
 \examples{
 data(bushfirem)
 data(bushfire.weights)
-ER(bushfirem, weights=bushfire.weights,alpha=0.01,steps.output=TRUE)
+det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,steps.output=TRUE,em.steps=100,tol=2e-6)
+plotMD(det.res$dist,ncol(bushfirem))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

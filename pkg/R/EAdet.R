@@ -1,6 +1,6 @@
 EAdet <-
 function(data, weights ,reach="max", transmission.function = "root", power=ncol(data), distance.type = "euclidean", 
-	global.distances=FALSE, maxl = 5, plotting = TRUE, monitor = FALSE, prob.quantile = 0.9, 
+	maxl = 5, plotting = TRUE, monitor = FALSE, prob.quantile = 0.9, 
 	random.start = FALSE, fix.start, threshold=FALSE, deterministic=TRUE, remove.missobs=FALSE, verbose=FALSE)
 {
 # EPIDEMIC Algorithm for Multivariate Outlier Detection
@@ -66,20 +66,12 @@ if ((length(new.indices)<n) & remove.missobs)
 		else data <- sweep(data, 2, qads, "/")
 	}
 	else data <- sweep(data, 2, mads, "/")
-#	if(monitor) {
-#		standardized.data <<- data
-#	      cat("\n memory use after standardisation: ",memory.size())
-#	}
+#
 # Calculation of distances
-if (global.distances==T) {
-	EA.dist.res<-EA.distances.parameters
-     cat("\n\n Global variable EA.distances used")
-} else {
 	EA.dist.res<-.EA.dist(data, n=n,p=p,weights = weights,reach=reach,
 				transmission.function = transmission.function, power=power, distance.type = distance.type, 
 				maxl = maxl, monitor = monitor,calc.time=calc.time)
 	if (monitor) cat("\n\n Distances finished")
-}
 # The distances calculated by EA.dist are the counterprobabilities in single precision. 
 # These counterprobabilities are stored as a global variable EA.distances to avoid copying this very large vector.
 if (monitor) {
@@ -152,10 +144,10 @@ cat("\n Transmission distance is ", EA.dist.res$output[3], "\n")
 		next		
 	}
 	duration <- max(infection.time)
-	if(monitor) {
-		last.infection.prob <<- 1 - hprod
-		if (verbose) 	cat("\n memory use after epidemic: ",memory.size())
-	}
+#	if(monitor) {
+#		last.infection.prob <- 1 - hprod
+#	}
+if (verbose) 	cat("\n memory use after epidemic: ",memory.size())
 # 
 ############ Impute infection.time for not infected #############
 # This is to show better the healthy on a graph of infection times
@@ -187,7 +179,7 @@ outlier<-time>=cutpoint
 		n.usable.records = sum(usable.records), medians = medians, mads = mads, prob.quantile = prob.quantile, 
 		quantile.deviations = qads, start = start.point, transmission.function = transmission.function, power=power,
 		maxl=maxl,
-		min.nn.dist=EA.dist.res$output[2],	transmission.distance = EA.dist.res$output[3], threshold=threshold, distance.type = distance.type, 
+		max.min.di=EA.dist.res$output[2],	transmission.distance = EA.dist.res$output[3], threshold=threshold, distance.type = distance.type, 
 		deterministic=deterministic, number.infected = n.infected, 
                 cutpoint=cutpoint, number.outliers=sum(outlier), outliers=outlier.ind,
 		duration = duration, computation.time = calc.time, initialisation.computation.time = comp.time.init)
@@ -201,6 +193,6 @@ outlier<-time>=cutpoint
 	cat("\n", "EA detection has finished with", n.infected, "infected points in", calc.time, "seconds.")
 	#	cat("\n The results are in EAdet.r and EAdet.i", "\n")
 return(invisible(list(output=EAdet.r,
-            infected = infectednfull, time = time, outind=outlier)))
+            infected = infectednfull, infection.time = time, outind=outlier)))
 }
 
