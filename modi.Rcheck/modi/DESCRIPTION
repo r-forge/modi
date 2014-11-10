@@ -1,6 +1,7 @@
 Package: modi
 Type: Package
-Title: Multivariate outlier detection and imputation for incomplete survey data
+Title: Multivariate outlier detection and imputation for incomplete
+        survey data
 Version: 1.5
 Date: 2013-10-30
 Author: Beat Hulliger
@@ -10,3 +11,5 @@ License: GPL-2
 LazyLoad: yes
 Encoding: latin1
 Depends: MASS, norm
+Packaged: 2014-11-10 15:09:53 UTC; beat.hulliger
+Built: R 3.1.1; ; 2014-11-10 15:09:55 UTC; windows
