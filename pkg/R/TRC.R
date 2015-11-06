@@ -1,6 +1,8 @@
 TRC <-
-function(data,weights,overlap=3,mincor=0, 
-                     robust.regression="rank", gamma=0.5,prob.quantile=0.75,alpha=0.05,md.type="m",monitor=F)
+function(data, weights, overlap=3, mincor=0, 
+         robust.regression="rank", gamma=0.5, 
+         prob.quantile=0.75, alpha=0.05, md.type="m",
+         monitor=FALSE)
 {
 # Multivariate Outlier Detection in Survey Data
 # TRC algorithm as described in:
@@ -29,20 +31,20 @@ function(data,weights,overlap=3,mincor=0,
 #
 ############ Preprocessing ############
 #
-	if(!is.matrix(data)) data<-as.matrix(data)
+	if(!is.matrix(data)) data <- as.matrix(data)
 	n <- nrow(data)
 	p <- ncol(data)
-	if (alpha<0.5) alpha<-1-alpha
+	if (alpha<0.5) alpha <- 1-alpha
 	if (missing(weights)) (weights <- rep(1,n))
 	if (length(weights)!=n) stop("\n Sampling weights of wrong length")
 	new.indices <- which(apply(is.na(data),1,prod)==0)
-	discarded<-NA
-	nfull<-n
+	discarded <- NA
+	nfull <- n
 	if (length(new.indices)<n) 
 	{
-		discarded<-which(apply(is.na(data),1,prod)==1)
+		discarded <- which(apply(is.na(data),1,prod)==1)
 		cat("Warning: missing observations",discarded,"removed from the data\n")
-		data <- data[new.indices,]
+		data  <-  data[new.indices,]
 		weights <- weights[new.indices]
 		n <- nrow(data)
 	}
@@ -71,8 +73,8 @@ function(data,weights,overlap=3,mincor=0,
 		weighted.ranks <- matrix(0,n,p)
 		for (i in 1:p)
 		{
-			weighted.ranks[,i] <- (apply(data[,i,drop=F],1,.sum.weights,weights=weights,observations=data[,i])
-										+0.5*apply(data[,i,drop=F],1,.sum.weights,weights=weights,observations=data[,i],lt=F)
+			weighted.ranks[,i] <- (apply(data[,i,drop=FALSE],1,.sum.weights,weights=weights,observations=data[,i])
+										+0.5*apply(data[,i,drop=FALSE],1,.sum.weights,weights=weights,observations=data[,i],lt=FALSE)
 										 +0.5)
 		}
 		scatter <- (12*(t(weighted.ranks)%*%(weights*weighted.ranks)) / (t(missing.matrix)%*%(weights*missing.matrix))^3-3)
@@ -109,20 +111,20 @@ function(data,weights,overlap=3,mincor=0,
 				if (size.of.cor.sets[i,j]>=overlap)
 				{
 					common.observations <- missing.matrix[,i]&missing.matrix[,j]
-					weighted.ranks.i <- (apply(data[common.observations,i,drop=F],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,i])
-												+0.5*apply(data[common.observations,i,drop=F],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,i],lt=F)
+					weighted.ranks.i <- (apply(data[common.observations,i,drop=FALSE],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,i])
+												+0.5*apply(data[common.observations,i,drop=FALSE],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,i],lt=FALSE)
 										 			+0.5)
-					weighted.ranks.j <- (apply(data[common.observations,j,drop=F],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,j])
-												+0.5*apply(data[common.observations,j,drop=F],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,j],lt=F)
+					weighted.ranks.j <- (apply(data[common.observations,j,drop=FALSE],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,j])
+												+0.5*apply(data[common.observations,j,drop=FALSE],1,.sum.weights,weights=weights[common.observations],observations=data[common.observations,j],lt=FALSE)
 										 			+0.5)
 					scatter[i,j] <- 12*sum(weights[common.observations]*weighted.ranks.i*weighted.ranks.j)/sum(weights[common.observations])^3-3
 				}
 				
 			}		}
-		scatter <- scatter+t(scatter)+diag(p)
+		scatter <- scatter + t(scatter) + diag(p)
 		scatter[scatter>1] <- 1
 		scatter[scatter<(-1)] <- -1
-		scatter <- 2*sin(pi*scatter/6) # Standardization put before imputation 13.03.03 Beat Hulliger
+		scatter <- 2 * sin(pi * scatter / 6) # Standardization put before imputation 13.03.03 Beat Hulliger
 		if (monitor) 
 		{
 			cat("Spearman Rank Correlations (truncated and standardized):\n")
@@ -137,12 +139,12 @@ function(data,weights,overlap=3,mincor=0,
 		# regressors correlations with small support are set to 0
     regressors.cor <- (scatter-diag(p))[variables.to.be.imputed,]*(size.of.cor.sets[variables.to.be.imputed,]>=(gamma*n)) 
 		regressors.cor <- as.matrix(t(regressors.cor))
-		if (monitor) cat("Regressors correlations\n",regressors.cor)
+		if (monitor) cat("Regressors correlations\n", regressors.cor)
 		if (length(variables.to.be.imputed)>1) regressors.list.ordered <- apply(-abs(regressors.cor),1,order) else 
-                  regressors.list.ordered<-as.matrix(t(order(-abs(regressors.cor))))
+                  regressors.list.ordered <- as.matrix(t(order(-abs(regressors.cor))))
 		for (v in 1:length(variables.to.be.imputed))
 		{
-			observations.to.be.imputed <-(!missing.matrix[,variables.to.be.imputed[v]])
+			observations.to.be.imputed  <- (!missing.matrix[,variables.to.be.imputed[v]])
 			if (monitor) cat("Variable",variables.to.be.imputed[v],":\n")
       # loop over candidate regressors
       r <- 0
@@ -167,7 +169,7 @@ function(data,weights,overlap=3,mincor=0,
 				}
 				data[observations.imputed.by.r.on.v,variables.to.be.imputed[v]] <- 
                                     matrix(c(rep(1,k),data[observations.imputed.by.r.on.v,regressors.list.ordered[r,v]]),k,2) %*%regression.coeff
-				observations.to.be.imputed[observations.imputed.by.r.on.v] <- F
+				observations.to.be.imputed[observations.imputed.by.r.on.v] <- FALSE
 				if (monitor) cat(" ",k,"observations imputed using regressor",regressors.list.ordered[r,v] ,
 					            "(cor=",scatter[variables.to.be.imputed[v],regressors.list.ordered[r,v]],
 					            "slope=",regression.coeff[2],
@@ -209,18 +211,18 @@ function(data,weights,overlap=3,mincor=0,
 	s.counts <- as.vector(table(s.patterns))
 	s.id <- cumsum(s.counts)
 	S <- length(s.id)
-	missing.items <- is.na(data[s.id,,drop=F])
+	missing.items <- is.na(data[s.id,,drop=FALSE])
 	nb.missing.items <- apply(missing.items,1,sum)
 	indices <- (!missing.items[1,])
 	if (md.type=="c") metric <- solve(scatter) else metric <- scatter
-	dist <- mahalanobis(data[1:s.id[1],indices,drop=F],center[indices],metric[indices,indices],inverted=(md.type=="c"))*p/(p-nb.missing.items[1])
+	dist <- mahalanobis(data[1:s.id[1],indices,drop=FALSE],center[indices],metric[indices,indices],inverted=(md.type=="c"))*p/(p-nb.missing.items[1])
 		if (S>1)
 		{
 			for (i in 2:S)
 			{
 				indices <- (!missing.items[i,])
-				dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=F],center[indices],
-				                             metric[indices,indices,drop=F],inverted=(md.type=="c"))*p/(p-nb.missing.items[i]))
+				dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=FALSE],center[indices],
+				                             metric[indices,indices,drop=FALSE],inverted=(md.type=="c"))*p/(p-nb.missing.items[i]))
 			}
 		}
 #
@@ -228,17 +230,17 @@ function(data,weights,overlap=3,mincor=0,
 #  
 # Nominate the outliers using the original numbering (without discarded obs.)
 #
-	cutpoint<-qf(alpha,p,n-p)/qf(0.5,p,n-p)*median(dist)
-	dist<-dist[order(perm)]
+	cutpoint <- qf(alpha,p,n-p)/qf(0.5,p,n-p)*median(dist)
+	dist <- dist[order(perm)]
 	good <- (1:n)[dist < cutpoint] 
 	outliers <- (1:n)[ - good]	
 # outliers and distances in original numbering with full dataset
-      outn<-logical(n)
-	  outn[outliers]<-TRUE
-	  outnfull<-logical(nfull)
-	  outnfull[new.indices]<-outn
-	  distnfull<-rep(NA,nfull)
-	  distnfull[new.indices]<-dist
+      outn <- logical(n)
+	  outn[outliers] <- TRUE
+	  outnfull <- logical(nfull)
+	  outnfull[new.indices] <- outn
+	  distnfull <- rep(NA,nfull)
+	  distnfull[new.indices] <- dist
 #
 ############ Computation time stop ############
 #

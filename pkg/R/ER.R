@@ -1,6 +1,6 @@
 ER <-
 function(data,weights,alpha=0.01,psi.par=c(2,1.25),
-         em.steps=100,steps.output=F,Estep.output=F,tolerance=1e-6)
+         em.steps=100,steps.output=FALSE,Estep.output=FALSE,tolerance=1e-6)
 {
 ##################  Preprocessing of the data  ##################
 #
@@ -46,7 +46,7 @@ weights <- weights[perm]
 s.counts <- as.vector(table(s.patterns))
 s.id <- cumsum(s.counts)
 S <- length(s.id)
-missing.items <- is.na(data[s.id,,drop=F])
+missing.items <- is.na(data[s.id,,drop=FALSE])
 nb.missing.items <- apply(missing.items,1,sum)
 if (steps.output) cat("End of missingness statistics\n")
 #
@@ -74,8 +74,8 @@ if (steps.output) cat("End of missingness statistics\n")
             #
             # Case where all observations have missing items
             #
-               mean.start <- apply(data,2,weighted.mean,w=weights,na.rm=T)
-               var.start <- diag(apply(data,2,weighted.var,w=weights,na.rm=T))
+               mean.start <- apply(data,2,weighted.mean,w=weights,na.rm=TRUE)
+               var.start <- diag(apply(data,2,weighted.var,w=weights,na.rm=TRUE))
             }
 		if (steps.output) {
       cat("\n","start.mean: ",mean.start,"\n","start.var: ")

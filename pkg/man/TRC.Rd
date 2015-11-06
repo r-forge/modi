@@ -7,7 +7,8 @@
    regression imputation using the a robust regression on the best predictor and it takes sampling weights into account.
 }
 \usage{
-TRC(data, weights, overlap = 3, mincor = 0, robust.regression = "rank", gamma = 0.5, prob.quantile = 0.75, alpha = 0.05, md.type = "m", monitor = F)
+TRC(data, weights, overlap = 3, mincor = 0, robust.regression = "rank", 
+gamma = 0.5, prob.quantile = 0.75, alpha = 0.05, md.type = "m", monitor = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -54,9 +55,9 @@ rank correlations. Journal of the Royal Statistical Society, A
 \author{ Beat Hulliger}
 
 \examples{
-data(bushfirem,bushfire.weights)
-det.res<-TRC(bushfirem,weights=bushfire.weights)
-plotMD(det.res$dist,ncol(bushfirem))
+data(bushfirem, bushfire.weights)
+det.res <- TRC(bushfirem, weights=bushfire.weights)
+PlotMD(det.res$dist, ncol(bushfirem))
 print(det.res)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the

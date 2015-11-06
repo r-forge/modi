@@ -9,7 +9,8 @@
   among the good data are outliers.
 }
 \usage{
-BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m", em.steps.start = 10, em.steps.loop = 5, better.estimation = F, monitor = F)
+BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m", 
+em.steps.start = 10, em.steps.loop = 5, better.estimation = FALSE, monitor = FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -19,7 +20,7 @@ BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m", em.steps.start = 
   \item{v}{an integer indicating the distance for the definition of the starting good subset: v=1 uses the Mahalanobis distance based 
   on the weighted mean and covariance, v=2 uses the Euclidean distance from the componentwise median}
   \item{c0}{the size of initial subset is c0*ncol(data).}
-  \item{alpha}{a probability indicating the level \code{(1-alpha)} of the cutoff quantile for good observations}
+  \item{alpha}{a small probability indicating the level \code{(1-alpha)} of the cutoff quantile for good observations}
   \item{md.type}{Type of Mahalanobis distance: "m" marginal, "c" conditional}
   \item{em.steps.start}{Number of iterations of EM-algorithm for starting good subset}
   \item{em.steps.loop}{Number of iterations of EM-algorithm for good subset}
@@ -28,8 +29,8 @@ BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m", em.steps.start = 
   \item{monitor}{If \code{TRUE} verbose output.}
 }
 \details{
-  The BACON algorithm with \code{v=1} is not robust but affine equivariant while \code{v=1} is robust but not affine equivariant. The threshold for Mahalanobis distances is 
-  a chisquare quantile at \code{(1-alpha)}. For relatively small data sets it may be better to choose \code{alpha/n} instead.
+  The BACON algorithm with \code{v=1} is not robust but affine equivariant while \code{v=1} is robust but not affine equivariant. The threshold for the (squared) Mahalanobis distances, beyond which an observation is an outlier, is 
+  a standardised chisquare quantile at \code{(1-alpha)}. For large data sets it may be better to choose \code{alpha/n} instead.
 
 The internal function \code{.EM.normal} is usually called from \code{BEM}. \code{.EM.normal} is implementing the EM-algorithm in such a way that part of the calculations can be saved to be reused in the BEM algorithm. \code{.EM.normal} does not contain the computation of the observed sufficient statistics, they will be computed in the main program of \code{BEM} and passed as parameters as well as the statistics on the missingness patterns.
 }
@@ -38,7 +39,7 @@ The internal function \code{.EM.normal} is usually called from \code{BEM}. \code
   \item{sample.size }{number of observations}
   \item{discarded.observations}{Number of discarded observations}
   \item{number.of.variables }{Number of variables}
-  \item{significance.level}{\code{alpha}}
+  \item{significance.level}{the probability used for the cutpoint, i.e.\ \code{alpha}}
   \item{initial.basic.subset.size}{Size of initial good subset}
   \item{final.basic.subset.size}{Size of final good subset}
   \item{number.of.iterations}{Number of iterations of the BACON step}

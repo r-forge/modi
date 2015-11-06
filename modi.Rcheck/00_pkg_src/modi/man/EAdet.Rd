@@ -7,7 +7,14 @@
   The last points infected are outliers. After running \code{EAdet} an imputation with \code{EAimp} may be run. 
   }
 \usage{
-EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), distance.type = "euclidean", maxl = 5, plotting = TRUE, monitor = FALSE, prob.quantile = 0.9, random.start = FALSE, fix.start, threshold = FALSE, deterministic = TRUE, rm.missobs=FALSE,verbose=FALSE)
+EAdet(data, weights, reach = "max", transmission.function = "root", power = ncol(data), 
+
+distance.type = "euclidean", 
+maxl = 5, plotting = TRUE, monitor = FALSE, 
+
+prob.quantile = 0.9, random.start = FALSE, fix.start, threshold = FALSE, 
+
+deterministic = TRUE, rm.missobs=FALSE,verbose=FALSE)
 }
 \arguments{
   \item{data}{a data frame or matrix with the data}

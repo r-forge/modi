@@ -6,7 +6,8 @@
 The \code{ER} function is an implementation of the ER-algorithm of Little and Smith (1987). 
 }
 \usage{
-ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), em.steps = 100, steps.output = F, Estep.output=F, tolerance=1e-6)
+ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), 
+em.steps = 100, steps.output = FALSE, Estep.output=FALSE, tolerance=1e-6)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -45,7 +46,7 @@ Journal of the American Statistical Association, 82, 58-68.}
 data(bushfirem)
 data(bushfire.weights)
 det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,steps.output=TRUE,em.steps=100,tol=2e-6)
-plotMD(det.res$dist,ncol(bushfirem))
+PlotMD(det.res$dist,ncol(bushfirem))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

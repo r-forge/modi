@@ -4,10 +4,10 @@ function(x, w, prob = 0.5,plot=FALSE)
 #### Weighted quantile function (default weighted median)
 #### Automatically removes missing values
 #### May plot the empirical distribution function
-## Programme by Cédric Béguin and Beat Hulliger
+## Programme by C?dric B?guin and Beat Hulliger
 ## Copyright 2003 Swiss Federal Statistical Office
 		if(missing(w))
-			return(quantile(x, prob, na.rm = T))
+			return(quantile(x, prob, na.rm = TRUE))
 		else w <- w[!is.na(x)]
 		x <- x[!is.na(x)]
 		ord <- order(x)

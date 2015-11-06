@@ -6,13 +6,14 @@
 Gaussian imputation uses the classical non-robust mean and covariance estimator and then imputes predictions under the multivariate normal model. Outliers may be created by this procedure. Then a high-breakdown robust estimate of the location and scatter with the Minimum Covariance Determinant algorithm is obtained and finally outliers are determined based on Mahalanobis distances based on the robust location and scatter.
 }
 \usage{
-GIMCD(data, alpha = 0.05,  seed = 234567819)
+GIMCD(data, alpha = 0.05,  seedem, seedmcd)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{data}{ a data frame or matrix with the data }
   \item{alpha}{ a threshold value for the cut-off for the outlier Mahalanobis distances }
-  \item{seed}{random number generator seed}
+  \item{seedem}{random number generator seed for EM algorithm, default is 234567819}
+  \item{seedmcd}{random number generator seed for MCD algorithm, if seedmcd is missing an internal seed will be used.}
 }
 \details{
 Normal imputation from package \code{norm} and MCD from package \code{MASS}. Note that currently MCD does not accept weights.
@@ -34,7 +35,7 @@ in Incomplete Survey Data, \emph{Survey Methodology}, Vol. 34, No. 1, pp. 91-103
 data(bushfirem)
 det.res<-GIMCD(bushfirem,alpha=0.1)
 print(det.res$center)
-plotMD(det.res$dist,ncol(bushfirem))
+PlotMD(det.res$dist,ncol(bushfirem))
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.

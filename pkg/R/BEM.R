@@ -1,5 +1,6 @@
 BEM <-
-function(data,weights,v=2,c0=3,alpha=0.01,md.type="m",em.steps.start=10,em.steps.loop=5,better.estimation=F,monitor=F)
+function(data,weights,v=2,c0=3,alpha=0.01,md.type="m",
+         em.steps.start=10,em.steps.loop=5,better.estimation=FALSE,monitor=FALSE)
 {
 # BACON-EEM Algorithm for multivariate outlier detection in incomplete survey data.
 # C. B\'eguin, B. Hulliger
@@ -52,7 +53,7 @@ weights <- weights[perm]
 s.counts <- as.vector(table(s.patterns))
 s.id <- cumsum(s.counts)
 S <- length(s.id)
-missing.items <- is.na(data[s.id,,drop=F])
+missing.items <- is.na(data[s.id,,drop=FALSE])
 nb.missing.items <- apply(missing.items,1,sum)
 if (monitor) cat("End of missingness statistics\n")
 #
@@ -65,8 +66,11 @@ if (monitor) cat("End of missingness statistics\n")
     if (initial.length>n) stop("\nInitial length bigger than number of observations. Please, decrease c0.")     
     c.np <- 1 + (p+1)/(N-p) + 2/(N-1-3*p)
     h <- floor((N+p+1)/2)
-    if (alpha<0.5) alpha<-1-alpha
-    chi.sq <- qchisq(alpha,p)
+    if (alpha>0.5) {
+      alpha <- 1 - alpha
+      cat("alpha should be less than 0.5: alpha set to 1-alpha\n", 1-alpha)
+    }
+    chi.sq <- qchisq(1-alpha,p)
 #
 ################## Step 1 ##################
 #
@@ -89,7 +93,7 @@ if (monitor) cat("End of missingness statistics\n")
     # Version 2
     #
         EM.mean <- apply(data,2,weighted.quantile,w=weights)
-        dist <- apply(sweep(data,2,EM.mean)^2,1,sum,na.rm=T)*p/(p-apply(is.na(data),1,sum))
+        dist <- apply(sweep(data,2,EM.mean)^2,1,sum,na.rm=TRUE)*p/(p-apply(is.na(data),1,sum))
     }
     else
     {
@@ -123,7 +127,7 @@ if (monitor) cat("End of missingness statistics\n")
                 {
                     T.obs[2:(p+1),2:(p+1)] <- T.obs[2:(p+1),2:(p+1)]+weights.obs[i]*data[i,]%*%t(data[i,]) 
                 }
-                EM.result <- .EM.normal(data=data[(s.id[1]+1):n,,drop=F],weights=weights[(s.id[1]+1):n],n=N,p=p, 
+                EM.result <- .EM.normal(data=data[(s.id[1]+1):n,,drop=FALSE],weights=weights[(s.id[1]+1):n],n=N,p=p, 
                                             s.counts=s.counts[2:S],s.id=s.id[2:S]-s.id[1],S=S-1,T.obs=T.obs,
                                             start.mean=apply(data,2,weighted.mean,w=weights,na.rm=TRUE),
                                             start.var=diag(apply(data,2,weighted.var,w=weights,na.rm=TRUE)),numb.it=em.steps.start,
@@ -148,7 +152,7 @@ if (monitor) cat("End of missingness statistics\n")
         #
         indices <- (!missing.items[1,])
         if (md.type=="c") EM.var.inverse <- solve(EM.var) else EM.var.inverse <- EM.var
-        dist <- mahalanobis(data[1:s.id[1],indices,drop=F],
+        dist <- mahalanobis(data[1:s.id[1],indices,drop=FALSE],
                             EM.mean[indices],EM.var.inverse[indices,indices],
                             inverted=(md.type=="c"))*p/(p-nb.missing.items[1])
         if (S>1)
@@ -156,8 +160,8 @@ if (monitor) cat("End of missingness statistics\n")
             for (i in 2:S)
             {
                 indices <- (!missing.items[i,])
-                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=F],
-                          EM.mean[indices],EM.var.inverse[indices,indices,drop=F],
+                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=FALSE],
+                          EM.mean[indices],EM.var.inverse[indices,indices,drop=FALSE],
                           inverted=(md.type=="c"))*p/(p-nb.missing.items[i]))
             }
         }
@@ -179,7 +183,7 @@ if (monitor) cat("End of missingness statistics\n")
     s.counts.good <- as.vector(table(s.patterns.good))
     s.id.good <- cumsum(s.counts.good)
     S.good <- length(s.id.good)
-    missing.items.good <- is.na(data[good[s.id.good],,drop=F])
+    missing.items.good <- is.na(data[good[s.id.good],,drop=FALSE])
     nb.missing.items.good <- apply(missing.items.good,1,sum)
     weights.good <- weights[good]
     N.good <- sum(weights.good)
@@ -206,7 +210,7 @@ if (monitor) cat("End of missingness statistics\n")
         T.obs.good[1,] <- T.obs.good[,1] <- c(-1,EM.mean.good)
         T.obs.good[2:(p+1),2:(p+1)] <- EM.var.good*(N.good-1)/N.good
         T.obs.good <- .sweep.operator(T.obs.good,1,TRUE)*N.good
-        T.obs.good.exist <- T       
+        T.obs.good.exist <- TRUE       
     }
     else    
     {   
@@ -223,12 +227,12 @@ if (monitor) cat("End of missingness statistics\n")
             if (monitor) cat("Preparation of T_obs\n")
             weights.good.obs <- weights.good[1:s.counts.good[1]]
             T.obs.good[1,] <- T.obs.good[,1] <- c(sum(weights.good.obs),
-                             apply(weights.good.obs*data[good[1:s.counts.good[1]],,drop=F],2,sum) )
+                             apply(weights.good.obs*data[good[1:s.counts.good[1]],,drop=FALSE],2,sum) )
             for (i in 1:s.counts.good[1])
             {
                 T.obs.good[2:(p+1),2:(p+1)] <- T.obs.good[2:(p+1),2:(p+1)]+weights.good.obs[i]*data[good[i],]%*%t(data[good[i],]) 
             }
-            EM.result.good <- .EM.normal(data=data[good[(s.id.good[1]+1):n.good],,drop=F],
+            EM.result.good <- .EM.normal(data=data[good[(s.id.good[1]+1):n.good],,drop=FALSE],
                                         weights=weights.good[(s.id.good[1]+1):n.good],n=N.good,p=p, 
                                         s.counts=s.counts.good[2:S.good],
                                         s.id=s.id.good[2:S.good]-s.id.good[1],
@@ -242,7 +246,7 @@ if (monitor) cat("End of missingness statistics\n")
         #
         # Case where all observations have missing items => EM
         #
-            EM.result.good <- .EM.normal(data=data[good,,drop=F],weights=weights.good,n=N.good,p=p, 
+            EM.result.good <- .EM.normal(data=data[good,,drop=FALSE],weights=weights.good,n=N.good,p=p, 
                                             s.counts=s.counts.good,s.id=s.id.good,S=S.good,T.obs=T.obs.good,
                                             start.mean=apply(data[good,],2,weighted.mean,w=weights.good,na.rm=TRUE),
                                             start.var=diag(apply(data[good,],2,weighted.var,w=weights.good,na.rm=TRUE)),
@@ -280,13 +284,13 @@ if (monitor) cat("End of missingness statistics\n")
         #
         indices <- (!missing.items[1,])
         if (md.type=="c") EM.var.good.inverse <- solve(EM.var.good) else EM.var.good.inverse <- EM.var.good
-        dist <- mahalanobis(data[1:s.id[1],indices,drop=F],EM.mean.good[indices],EM.var.good.inverse[indices,indices],inverted=(md.type=="c"))*p/(p-nb.missing.items[1])
+        dist <- mahalanobis(data[1:s.id[1],indices,drop=FALSE],EM.mean.good[indices],EM.var.good.inverse[indices,indices],inverted=(md.type=="c"))*p/(p-nb.missing.items[1])
         if (S>1)
         {
             for (i in 2:S)
             {
                 indices <- (!missing.items[i,])
-                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=F],EM.mean.good[indices],EM.var.good.inverse[indices,indices,drop=F],inverted=(md.type=="c"))*p/(p-nb.missing.items[i]))
+                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=FALSE],EM.mean.good[indices],EM.var.good.inverse[indices,indices,drop=FALSE],inverted=(md.type=="c"))*p/(p-nb.missing.items[i]))
             }
         }
         #
@@ -316,7 +320,7 @@ if (monitor) cat("End of missingness statistics\n")
         s.counts.good <- as.vector(table(s.patterns.good))
         s.id.good <- cumsum(s.counts.good)
         S.good <- length(s.id.good)
-        missing.items.good <- is.na(data[good[s.id.good],,drop=F])
+        missing.items.good <- is.na(data[good[s.id.good],,drop=FALSE])
         nb.missing.items.good <- apply(missing.items.good,1,sum)
         weights.good <- weights[good]
         N.good <- sum(weights.good)
@@ -343,7 +347,7 @@ if (monitor) cat("End of missingness statistics\n")
             T.obs.good[1,] <- T.obs.good[,1] <- c(-1,EM.mean.good)
             T.obs.good[2:(p+1),2:(p+1)] <- EM.var.good*(N.good-1)/N.good
             T.obs.good <- .sweep.operator(T.obs.good,1,TRUE)*N.good
-            T.obs.good.exist <- T                                   
+            T.obs.good.exist <- TRUE                                   
         }
         else
         {   
@@ -367,9 +371,9 @@ if (monitor) cat("End of missingness statistics\n")
                 # to it
                 #
                     if (monitor) cat("Updating of T_obs\n")
-                    good.boo <- oldgood.boo <- rep(F,n)
-                    good.boo[T.obs.good.indices] <- T
-                    oldgood.boo[T.obs.oldgood.indices]  <- T                    
+                    good.boo <- oldgood.boo <- rep(FALSE, n)
+                    good.boo[T.obs.good.indices] <- TRUE
+                    oldgood.boo[T.obs.oldgood.indices]  <- TRUE                    
                     for (i in (1:n)[xor(good.boo,oldgood.boo)&oldgood.boo])
                     {
                         T.obs.good[1,] <- T.obs.good[1,]-weights[i]*c(1,data[i,])
@@ -502,7 +506,7 @@ if (monitor) cat("End of missingness statistics\n")
 #
 ################## Output ##################
 #
-   cat("\n","BEM has detected",length(outliers),"outlier(s) in",calc.time,"seconds.","\n","\n")
+   cat("\n","BEM has detected",length(outliers), "outlier(s) in", calc.time[1], "seconds.","\n","\n")
 #    cat(" The results are in BEM.r and BEM.i","\n")
 return(invisible(list(output=BEM.r,outind=outnfull,dist=distnfull)))
 }

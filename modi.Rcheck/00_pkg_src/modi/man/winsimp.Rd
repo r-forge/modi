@@ -1,5 +1,5 @@
-\name{winsimp}
-\alias{winsimp}
+\name{Winsimp}
+\alias{Winsimp}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
 Winsorization followed by imputation
@@ -8,7 +8,7 @@ Winsorization followed by imputation
 Winsorisation of outliers according to the Mahalanobis distance followed by an imputation under the multivariate normal model. Only the outliers are winsorized. The Mahalanobis distance \code{MDmiss} allows for missing values. 
 }
 \usage{
-winsimp(data, center, scatter, outind, seed = 1000003)
+Winsimp(data, center, scatter, outind, seed = 1000003)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -43,7 +43,7 @@ Uses \code{\link{imp.norm}} from the \code{\link{norm}} package.
 \examples{
 data(bushfirem,bushfire.weights)
 det.res<-TRC(bushfirem,weight=bushfire.weights)
-imp.res<-winsimp(bushfirem,det.res$output$center,det.res$output$scatter,det.res$outind)
+imp.res<-Winsimp(bushfirem,det.res$output$center,det.res$output$scatter,det.res$outind)
 print(imp.res$output)
 }
 \keyword{robust}

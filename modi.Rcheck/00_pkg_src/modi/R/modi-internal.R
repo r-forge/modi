@@ -20,7 +20,7 @@ function(data, n,p,weights,reach,transmission.function, power, distance.type, ma
 		di <- counterprobs[.ind.dijs(i, 1:n, n)]
 		min.di[i] <- .nz.min(di)	#
 # weighted mean of distances to account for missing distances
-		means.di[i] <- sum(di * weights[ - i], na.rm = T)/sum(weights[ - i][!is.na(di)])
+		means.di[i] <- sum(di * weights[ - i], na.rm = TRUE)/sum(weights[ - i][!is.na(di)])
 	}
 #
 # Sample spatial median
@@ -29,10 +29,10 @@ function(data, n,p,weights,reach,transmission.function, power, distance.type, ma
      usable.records <- apply(!is.na(data), 1, sum) >= p/2
 	means.di.complete <- means.di
 	means.di.complete[!usable.records] <- NA
-	sample.spatial.median.index <- which(means.di.complete == min(means.di.complete, na.rm = T))[1]	#
+	sample.spatial.median.index <- which(means.di.complete == min(means.di.complete, na.rm = TRUE))[1]	#
 # Determine tuning distance d0 
 #
-	max.min.di <- max(min.di, na.rm = T)
+	max.min.di <- max(min.di, na.rm = TRUE)
      d0 <- switch(EXPR=as.character(reach),max=min(max.min.di,2*sqrt(p)),
                       quant=min(weighted.quantile(min.di, w = weights, prob = 1-(p+1)/n), 2 * sqrt(p)),
                       reach)
@@ -96,10 +96,14 @@ return(invisible(list(output=c(sample.spatial.median.index,max.min.di,d0),
 .nz.min <-
 function(x) {
 ############ Non-zero non-missing minimum function ############
-# B?guin,C. 2001
-	     nz.min.temp <- min(x[x != 0], na.rm = T)
-             if (is.infinite(nz.min.temp)) return(NA) else return(nz.min.temp)
-             }
+# B?guin,C. 2001, B. Hulliger 2015
+  if (sum(!is.na(x))==0) {
+    nz.min.temp <- NA
+  } else {
+	  nz.min.temp <- min(x[x != 0], na.rm = TRUE)
+  }
+  return(nz.min.temp)  
+}
 
 .ind.dij <-
 function(i, j, n)
@@ -120,9 +124,9 @@ function(i, js, n)
 .sum.weights <-
 function(observations,weights,value,lt=TRUE)
 {
-# sum of weights for observations < value (if lt=T) or observations=value (if lt=F)
-if (lt) return(sum(weights*(observations<value),na.rm=T)) else 
-return(sum(weights*(observations==value),na.rm=T))
+# sum of weights for observations < value (if lt=TRUE) or observations=value (if lt=FALSE)
+if (lt) return(sum(weights*(observations<value),na.rm=TRUE)) else 
+return(sum(weights*(observations==value),na.rm=TRUE))
 }
 
 .sweep.operator <-
@@ -166,7 +170,7 @@ function(d,present,psi.par=c(2,1.25))
 
 .EM.normal <-
 function(data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id, S, 
-                            T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F)
+                            T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=FALSE)
 {
 ##################                                  ##################
 ##################  EM for multivariate normal data ##################
@@ -268,7 +272,7 @@ theta[1,2:(p+1)] <- theta[2:(p+1),1] <- start.mean
 theta[2:(p+1),2:(p+1)] <- start.var
 if (Estep.output) cat("\n","theta: \n",theta)
 
-break.flag <- F
+break.flag <- FALSE
 #
 # Initialisation of robustness weights to 1
 #
@@ -348,13 +352,13 @@ for (boucle in 1:numb.it)
         ER.mean <- theta[1,2:(p+1)]
         ER.var <- theta[2:(p+1),2:(p+1)]
         indices <- (!missing.items[1,])
-        dist <- mahalanobis(data[1:s.id[1],indices,drop=F],ER.mean[indices],ER.var[indices,indices])*p/(p-nb.missing.items[1])
+        dist <- mahalanobis(data[1:s.id[1],indices,drop=FALSE],ER.mean[indices],ER.var[indices,indices])*p/(p-nb.missing.items[1])
         if (S>1)
         {
             for (i in 2:S)
             {
                 indices <- (!missing.items[i,])
-                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=F],ER.mean[indices],ER.var[indices,indices,drop=F])*p/(p-nb.missing.items[i]))
+                dist <- c(dist,mahalanobis(data[(s.id[i-1]+1):s.id[i],indices,drop=FALSE],ER.mean[indices],ER.var[indices,indices,drop=FALSE])*p/(p-nb.missing.items[i]))
             }
         }
     #

@@ -1,4 +1,4 @@
-winsimp <-
+Winsimp <-
 function(data,center,scatter,outind,seed=1000003)
 # Imputation under the multivariate normal model after winsorization
 # (robust) center and scatter must be given as arguments 
@@ -16,7 +16,7 @@ outind<-as.logical(outind)
 # Mahalanobis distance (not squared)
 data.wins <- as.matrix(data)
 MD<-sqrt(MDmiss(data.wins,center,scatter))
-cutpoint<-min(MD[outind],na.rm=T)
+cutpoint<-min(MD[outind],na.rm=TRUE)
 # robustness weight
 u <- ifelse(MD <=cutpoint,1,cutpoint/MD)
 #  winsorization for outliers (only outliers!)
@@ -37,10 +37,10 @@ if (sum(is.na(data.imp))>0) cat("There are missing values in the imputed data se
 ############ Results ############
 #
 
-winsimp.r <-  list(cutpoint=cutpoint, proc.time = calc.time, n.missing.before=sum(is.na(data)),n.missing.after=sum(is.na(data.imp)))
+Winsimp.r <-  list(cutpoint=cutpoint, proc.time = calc.time, n.missing.before=sum(is.na(data)),n.missing.after=sum(is.na(data.imp)))
 #cat("Results are in winsimp.r and the imputed data is in winsimp.i")
 
-return(invisible(list(output=winsimp.r,imputed.data=data.imp)))
+return(invisible(list(output=Winsimp.r,imputed.data=data.imp)))
 
 }
 

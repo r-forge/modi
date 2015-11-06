@@ -9,10 +9,10 @@ ER	ER
 GIMCD	GIMCD
 MDmiss	MDmiss
 modi-internal	modi-internal
-plotMD	plotMD
+PlotMD	plotMD
 POEM	POEM
 sepe	sepe
 TRC	TRC
 weighted.quantile	weighted.quantile
 weighted.var	weighted.var
-winsimp	winsimp
+Winsimp	winsimp

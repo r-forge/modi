@@ -2,8 +2,8 @@ Package: modi
 Type: Package
 Title: Multivariate outlier detection and imputation for incomplete
         survey data
-Version: 1.5
-Date: 2013-10-30
+Version: 1.6
+Date: 2015-10-30
 Author: Beat Hulliger
 Maintainer: Beat Hulliger <beat.hulliger@fhnw.ch>
 Description: Algorithms for multivariate outlier detection when missing values occur. Algorithms are based on Mahalanobis distance or data depth. Imputation is based on the multivariate normal model or uses nearest neighbour donors. The algorithms take sample designs, in particular weighting, into account. 
@@ -11,4 +11,5 @@ License: GPL-2
 LazyLoad: yes
 Encoding: latin1
 Depends: MASS, norm
-Packaged: 2014-11-10 15:09:53 UTC; beat.hulliger
+NeedsCompilation: no
+Packaged: 2015-11-06 07:54:53 UTC; beat.hulliger

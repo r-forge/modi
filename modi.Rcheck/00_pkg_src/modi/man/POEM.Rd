@@ -6,7 +6,8 @@
  POEM takes into account missing values, outlier indicators, error indicators and sampling weights.
 }
 \usage{
-POEM(data, weights, outind, errors, missing.matrix, alpha = 0.5, beta = 0.5, reweight.out = FALSE, c = 5, preliminary.mean.imputation = FALSE, monitor=FALSE)
+POEM(data, weights, outind, errors, missing.matrix, alpha = 0.5, beta = 0.5, 
+reweight.out = FALSE, c = 5, preliminary.mean.imputation = FALSE, monitor=FALSE)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{

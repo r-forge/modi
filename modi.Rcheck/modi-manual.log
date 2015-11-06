@@ -1,14 +1,14 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2014.9.10)  10 NOV 2014 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  6 NOV 2015 08:55
 entering extended mode
-**C:/Users/BEAT?1.HUL/AppData/Local/Temp/RtmpiwMQel/Rd2pdf1d04532349ca/Rd2.tex
-(C:/Users/BEAT~1.HUL/AppData/Local/Temp/RtmpiwMQel/Rd2pdf1d04532349ca/Rd2.tex
-LaTeX2e <2014/05/01>
-Babel <3.9k> and hyphenation patterns for 68 languages loaded.
+**Rd2.tex
+(Rd2.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
-Document Class: book 2007/10/19 v1.4h Standard LaTeX document class
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"
-File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
+File: bk10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@chapter=\count80
@@ -23,14 +23,14 @@ File: bk10.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:/PROGRA~1/R/R-31~1.1/share/texmf/tex/latex\Rd.sty
+(C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\Rd.sty
 Package: Rd 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty"
-Package: ifthen 2001/05/26 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty"
-Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
+Package: longtable 2014/10/28 v4.11 Multi-page Table package (DPC)
 \LTleft=\skip43
 \LTright=\skip44
 \LTpre=\skip45
@@ -48,18 +48,18 @@ Package: longtable 2004/02/01 v4.11 Multi-page Table package (DPC)
 \LT@p@ftn=\toks14
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty"
-Package: bm 2004/02/26 v1.1c Bold Symbol Support (DPC/FMi)
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
 \symboldoperators=\mathgroup4
 \symboldletters=\mathgroup5
 \symboldsymbols=\mathgroup6
-LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 137.
-LaTeX Info: Redefining \bm on input line 203.
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2003/08/22 v1.5q LaTeX2e package for verbatim enhancements
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
 \every@verbatim=\toks15
 \verbatim@line=\toks16
 \verbatim@in@stream=\read1
@@ -81,73 +81,74 @@ Package textcomp Info: Sub-encoding information:
 (textcomp)             only a restricted character set as indicated.
 (textcomp)             Family '?' is the default used for unknown fonts.
 (textcomp)             See the documentation for details.
-Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 71.
+Package textcomp Info: Setting ? sub-encoding to TS1/1 on input line 79.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"
 File: ts1enc.def 2001/06/05 v3.0e (jk/car/fm) Standard LaTeX file
 )
-LaTeX Info: Redefining \oldstylenums on input line 266.
-Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 281.
-Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 282.
-Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 283.
-Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 284.
-Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 285.
-Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 286.
-Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 287.
-Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 288.
-Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 289.
-Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 290.
-Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 291.
-Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 292.
-Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 293.
-Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 294.
-Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 295.
-Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 296.
-Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 297.
-Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 298.
-Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 299.
-Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 300.
-Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 301.
-Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 302.
-Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 303.
-Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 304.
+LaTeX Info: Redefining \oldstylenums on input line 334.
+Package textcomp Info: Setting cmr sub-encoding to TS1/0 on input line 349.
+Package textcomp Info: Setting cmss sub-encoding to TS1/0 on input line 350.
+Package textcomp Info: Setting cmtt sub-encoding to TS1/0 on input line 351.
+Package textcomp Info: Setting cmvtt sub-encoding to TS1/0 on input line 352.
+Package textcomp Info: Setting cmbr sub-encoding to TS1/0 on input line 353.
+Package textcomp Info: Setting cmtl sub-encoding to TS1/0 on input line 354.
+Package textcomp Info: Setting ccr sub-encoding to TS1/0 on input line 355.
+Package textcomp Info: Setting ptm sub-encoding to TS1/4 on input line 356.
+Package textcomp Info: Setting pcr sub-encoding to TS1/4 on input line 357.
+Package textcomp Info: Setting phv sub-encoding to TS1/4 on input line 358.
+Package textcomp Info: Setting ppl sub-encoding to TS1/3 on input line 359.
+Package textcomp Info: Setting pag sub-encoding to TS1/4 on input line 360.
+Package textcomp Info: Setting pbk sub-encoding to TS1/4 on input line 361.
+Package textcomp Info: Setting pnc sub-encoding to TS1/4 on input line 362.
+Package textcomp Info: Setting pzc sub-encoding to TS1/4 on input line 363.
+Package textcomp Info: Setting bch sub-encoding to TS1/4 on input line 364.
+Package textcomp Info: Setting put sub-encoding to TS1/5 on input line 365.
+Package textcomp Info: Setting uag sub-encoding to TS1/5 on input line 366.
+Package textcomp Info: Setting ugq sub-encoding to TS1/5 on input line 367.
+Package textcomp Info: Setting ul8 sub-encoding to TS1/4 on input line 368.
+Package textcomp Info: Setting ul9 sub-encoding to TS1/4 on input line 369.
+Package textcomp Info: Setting augie sub-encoding to TS1/5 on input line 370.
+Package textcomp Info: Setting dayrom sub-encoding to TS1/3 on input line 371.
+Package textcomp Info: Setting dayroms sub-encoding to TS1/3 on input line 372.
 
-Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 305.
-Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 306.
-Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 307.
-Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 308.
-Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 309.
-Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 310.
-Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 311.
-Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 312.
-Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 313.
-Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 314.
-Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 315.
-Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 316.
-Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 317.
-Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 318.
-Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 319.
-Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 320.
-Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 321.
-Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 322.
-Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 323.
-Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 324.
-Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 325.
-Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 326.
-Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 327.
-Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 328.
-Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 329.
-Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 330.
-Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 331.
-Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 332.
-Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 333.
-Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 334.
-Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 335.
-Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 336.
-Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 337.
-Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 338.
-Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 339.
-Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 340.
+Package textcomp Info: Setting pxr sub-encoding to TS1/0 on input line 373.
+Package textcomp Info: Setting pxss sub-encoding to TS1/0 on input line 374.
+Package textcomp Info: Setting pxtt sub-encoding to TS1/0 on input line 375.
+Package textcomp Info: Setting txr sub-encoding to TS1/0 on input line 376.
+Package textcomp Info: Setting txss sub-encoding to TS1/0 on input line 377.
+Package textcomp Info: Setting txtt sub-encoding to TS1/0 on input line 378.
+Package textcomp Info: Setting lmr sub-encoding to TS1/0 on input line 379.
+Package textcomp Info: Setting lmdh sub-encoding to TS1/0 on input line 380.
+Package textcomp Info: Setting lmss sub-encoding to TS1/0 on input line 381.
+Package textcomp Info: Setting lmssq sub-encoding to TS1/0 on input line 382.
+Package textcomp Info: Setting lmvtt sub-encoding to TS1/0 on input line 383.
+Package textcomp Info: Setting lmtt sub-encoding to TS1/0 on input line 384.
+Package textcomp Info: Setting qhv sub-encoding to TS1/0 on input line 385.
+Package textcomp Info: Setting qag sub-encoding to TS1/0 on input line 386.
+Package textcomp Info: Setting qbk sub-encoding to TS1/0 on input line 387.
+Package textcomp Info: Setting qcr sub-encoding to TS1/0 on input line 388.
+Package textcomp Info: Setting qcs sub-encoding to TS1/0 on input line 389.
+Package textcomp Info: Setting qpl sub-encoding to TS1/0 on input line 390.
+Package textcomp Info: Setting qtm sub-encoding to TS1/0 on input line 391.
+Package textcomp Info: Setting qzc sub-encoding to TS1/0 on input line 392.
+Package textcomp Info: Setting qhvc sub-encoding to TS1/0 on input line 393.
+Package textcomp Info: Setting futs sub-encoding to TS1/4 on input line 394.
+Package textcomp Info: Setting futx sub-encoding to TS1/4 on input line 395.
+Package textcomp Info: Setting futj sub-encoding to TS1/4 on input line 396.
+Package textcomp Info: Setting hlh sub-encoding to TS1/3 on input line 397.
+Package textcomp Info: Setting hls sub-encoding to TS1/3 on input line 398.
+Package textcomp Info: Setting hlst sub-encoding to TS1/3 on input line 399.
+Package textcomp Info: Setting hlct sub-encoding to TS1/5 on input line 400.
+Package textcomp Info: Setting hlx sub-encoding to TS1/5 on input line 401.
+Package textcomp Info: Setting hlce sub-encoding to TS1/5 on input line 402.
+Package textcomp Info: Setting hlcn sub-encoding to TS1/5 on input line 403.
+Package textcomp Info: Setting hlcw sub-encoding to TS1/5 on input line 404.
+Package textcomp Info: Setting hlcf sub-encoding to TS1/5 on input line 405.
+Package textcomp Info: Setting pplx sub-encoding to TS1/3 on input line 406.
+Package textcomp Info: Setting pplj sub-encoding to TS1/3 on input line 407.
+Package textcomp Info: Setting ptmx sub-encoding to TS1/4 on input line 408.
+Package textcomp Info: Setting ptmj sub-encoding to TS1/4 on input line 409.
 )
 \ldescriptionwidth=\skip47
 
@@ -156,28 +157,28 @@ Package: fontenc 2005/09/27 v1.99g Standard LaTeX package
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"
 File: t1enc.def 2005/09/27 v1.99g Standard LaTeX file
-LaTeX Font Info:    Redeclaring font encoding T1 on input line 43.
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
-("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\inconsolata.sty"
-Package: inconsolata 2014/06/22 v1.05
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\zi4.sty"
+Package: zi4 2014/06/22 v1.05
 
 `inconsolata-zi4' v1.05, 2014/06/22 Text macros for Inconsolata (msharpe)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
-Package: keyval 2014/05/08 v1.15 key=value parser (DPC)
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
 \KV@toks@=\toks17
 )
 \zifour@ocount=\count93
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
-Package: color 2014/04/23 v1.1a Standard LaTeX Color (DPC)
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg"
 File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
-Package color Info: Driver file: pdftex.def on input line 137.
+Package color Info: Driver file: pdftex.def on input line 142.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
@@ -266,7 +267,6 @@ Package hyperref Info: Plain pages OFF on input line 4458.
 Package hyperref Info: Backreferencing OFF on input line 4463.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4688.
-LaTeX Info: Redefining \href on input line 4952.
 \c@Hy@tempcnt=\count98
 LaTeX Info: Redefining \url on input line 5041.
 \XeTeXLinkMargin=\dimen105
@@ -303,32 +303,32 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 361.
+(hyperref)                setting the option has no effect on input line 366.
 
-Package hyperref Info: Option `colorlinks' set `true' on input line 361.
+Package hyperref Info: Option `colorlinks' set `true' on input line 366.
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 361.
+(hyperref)                setting the option has no effect on input line 366.
 
-Package hyperref Info: Option `linktocpage' set `true' on input line 361.
-Package hyperref Info: Option `plainpages' set `false' on input line 361.
+Package hyperref Info: Option `linktocpage' set `true' on input line 366.
+Package hyperref Info: Option `plainpages' set `false' on input line 366.
 ) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty"
-Package: makeidx 2000/03/29 v1.0m Standard LaTeX package
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
-Package: inputenc 2014/04/30 v1.2b Input encoding file
+Package: inputenc 2015/03/17 v1.2c Input encoding file
 \inpenc@prehook=\toks18
 \inpenc@posthook=\toks19
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 Now handling font encoding OML ...
 ... no UTF-8 mapping file for font encoding OML
 Now handling font encoding T1 ...
 ... processing UTF-8 mapping file for font encoding T1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu"
-File: t1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: t1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00AB (decimal 171)
@@ -478,7 +478,7 @@ Now handling font encoding OT1 ...
 ... processing UTF-8 mapping file for font encoding OT1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu"
-File: ot1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: ot1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A1 (decimal 161)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00B8 (decimal 184)
@@ -509,7 +509,7 @@ Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu"
-File: omsenc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: omsenc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A7 (decimal 167)
    defining Unicode char U+00B6 (decimal 182)
    defining Unicode char U+00B7 (decimal 183)
@@ -525,7 +525,7 @@ Now handling font encoding TS1 ...
 ... processing UTF-8 mapping file for font encoding TS1
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"
-File: ts1enc.dfu 2008/04/05 v1.1m UTF-8 support for inputenc
+File: ts1enc.dfu 2015/06/27 v1.1n UTF-8 support for inputenc
    defining Unicode char U+00A2 (decimal 162)
    defining Unicode char U+00A3 (decimal 163)
    defining Unicode char U+00A4 (decimal 164)
@@ -610,12 +610,12 @@ Now handling font encoding PD1 ...
    defining Unicode char U+2423 (decimal 9251)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2014/04/30 v1.2b Input encoding file
+File: latin1.def 2015/03/17 v1.2c Input encoding file
 ))
 \@indexfile=\write3
 
 Writing index file Rd2.idx
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.aux)
+(Rd2.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
@@ -630,9 +630,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 8.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 8.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
-File: ts1cmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 8.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 8.
@@ -641,11 +640,6 @@ LaTeX Font Info:    Try loading font information for T1+ptm on input line 8.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
-)
-(C:\Users\beat.hulliger\AppData\Roaming\MiKTeX\2.9\tex\latex\upquote\upquote.st
-y
-Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
-tim
 )
 (C:\Users\beat.hulliger\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mk
 ii
@@ -676,8 +670,7 @@ LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
 LaTeX Info: Redefining \nameref on input line 8.
 
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.out)
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.out)
+(Rd2.out) (Rd2.out)
 \@outlinefile=\write4
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 9.
@@ -685,9 +678,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <20.74> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 11.
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
-File: latin1.def 2014/04/30 v1.2b Input encoding file
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"
+File: latin1.def 2015/03/17 v1.2c Input encoding file
 )
 LaTeX Font Info:    Try loading font information for T1+zi4 on input line 23.
 
@@ -695,13 +687,12 @@ LaTeX Font Info:    Try loading font information for T1+zi4 on input line 23.
 File: t1zi4.fd 2014/06/22 T1/zi4 (Inconsolata)
 )
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 30.
-LaTeX Font Info:    Try loading font information for T1+phv on input line 30.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 31.
+LaTeX Font Info:    Try loading font information for T1+phv on input line 31.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd"
 File: t1phv.fd 2001/06/04 scalable font definitions for T1/phv.
-)
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.toc
+) (Rd2.toc
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <7> on input line 1.
 LaTeX Font Info:    External font `cmex10' loaded for size
@@ -710,140 +701,119 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 \tf@toc=\write5
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [1
 
 
 {C:/Users/beat.hulliger/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Overfull \hbox (269.78088pt too wide) in paragraph at lines 90--90
- []\T1/zi4/m/n/10 BEM(data, weights, v = 2, c0 = 3, alpha = 0.01, md.type = "m"
-, em.steps.start = 10, em.steps.loop = 5, better.estimation = F, monitor = F)[]
- 
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [2]
+Overfull \hbox (8.78088pt too wide) in paragraph at lines 92--92
+ []\T1/zi4/m/n/10 em.steps.start = 10, em.steps.loop = 5, better.estimation = F
+ALSE, monitor = FALSE)[] 
  []
 
-[2] [3] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+[3] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [4]
-Overfull \hbox (161.86044pt too wide) in paragraph at lines 201--210
+Overfull \hbox (161.86044pt too wide) in paragraph at lines 203--212
 []\T1/ptm/m/n/10 bushfirem: \T1/zi4/m/n/10 set.seed(234567891) miss.rate <- 0.2
  miss.ind<-rep(F,n*p) miss.ind[sample(n*p,floor(miss.rate*n*p))]<-T
  []
 
 
-Overfull \hbox (61.78088pt too wide) in paragraph at lines 201--210
+Overfull \hbox (61.78088pt too wide) in paragraph at lines 203--212
 \T1/zi4/m/n/10 bushmiss<-matrix(miss.ind,ncol=5) mean(bushmiss) bushfirem<-bush
 fire bushfirem[bushmiss]<-NA 
  []
 
 
-Overfull \hbox (39.53938pt too wide) in paragraph at lines 211--213
+Overfull \hbox (39.53938pt too wide) in paragraph at lines 213--215
 []\T1/ptm/m/n/10 For test-ing pur-poses weights are pro-vided: \T1/zi4/m/n/10 b
 ushfire.weights<-rep(c(1,2,5),length=nrow(bushfire)) 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
-Overfull \hbox (1003.78088pt too wide) in paragraph at lines 242--242
+Overfull \hbox (29.78088pt too wide) in paragraph at lines 244--244
  []\T1/zi4/m/n/10 EAdet(data, weights, reach = "max", transmission.function = "
-root", power = ncol(data), distance.type = "euclidean", maxl = 5, plotting = TR
-UE, monitor = FALSE, prob.quantile = 0.9, random.start = FALSE, fix.start, thre
-shold = FALSE, deterministic = TRUE, rm.missobs=FALSE,verbose=FALSE)[] 
+root", power = ncol(data),[] 
  []
 
 
-Overfull \hbox (61.64977pt too wide) in paragraph at lines 253--258
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 262--267
 \T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
 T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
 n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
  []
 
 [5]
-Overfull \hbox (39.60794pt too wide) in paragraph at lines 266--267
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 275--276
 []\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
 above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
  []
 
-[6] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [7]
-Overfull \hbox (222.78088pt too wide) in paragraph at lines 358--358
- []\T1/zi4/m/n/10 EAimp(data, weights ,  outind, reach="max",      transmission
-.function = "root", power=ncol(data), distance.type = "euclidean",[] 
- []
-
-
-Overfull \hbox (114.78088pt too wide) in paragraph at lines 359--359
- []\T1/zi4/m/n/10 duration = 5, maxl = 5, kdon = 1, monitor = FALSE, threshold 
-= FALSE, deterministic = TRUE, fixedprop = 0)[] 
- []
-
-
-Overfull \hbox (61.64977pt too wide) in paragraph at lines 369--374
+[6] [7] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+)
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 383--388
 \T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
 T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
 n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
  []
 
 
-Overfull \hbox (39.60794pt too wide) in paragraph at lines 378--379
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 392--393
 []\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
 above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
  []
 
 [8] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Overfull \hbox (183.78088pt too wide) in paragraph at lines 447--447
- []\T1/zi4/m/n/10 ER(data, weights, alpha = 0.01, psi.par = c(2, 1.25), em.step
-s = 100, steps.output = F, Estep.output=F, tolerance=1e-6)[] 
- []
-
-[9] [10]
-Overfull \hbox (49.38089pt too wide) in paragraph at lines 501--501
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [9] [10]
+Overfull \hbox (49.38089pt too wide) in paragraph at lines 516--516
  []\T1/zi4/m/n/9 det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,ste
 ps.output=TRUE,em.steps=100,tol=2e-6)[] 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [11]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [12]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 )
-Overfull \hbox (11.78088pt too wide) in paragraph at lines 633--635
+Overfull \hbox (11.78088pt too wide) in paragraph at lines 649--651
 \T1/zi4/m/n/10 .EA.dist(data,n,p,weights,reach,transmission.function, power, di
 stance.type, maxl) 
  []
 
 
-Overfull \hbox (164.33669pt too wide) in paragraph at lines 645--647
+Overfull \hbox (164.33669pt too wide) in paragraph at lines 661--663
 []\T1/ptm/m/n/10 Sum of weights for ob-ser-va-tions < value (if lt=T) or ob-ser
 -va-tions=value (if lt=F): \T1/zi4/m/n/10 .sum.weights(observations,weights,val
 ue,lt=TRUE) 
  []
 
 
-Overfull \hbox (36.10774pt too wide) in paragraph at lines 651--653
+Overfull \hbox (36.10774pt too wide) in paragraph at lines 667--669
 []\T1/ptm/m/n/10 psi-function (de-fined in Lit-tle and Smith for ER al-go-rithm
 ): \T1/zi4/m/n/10 .psi.lismi(d,present,psi.par=c(2,1.25)) 
  []
 
 
-Overfull \hbox (559.43864pt too wide) in paragraph at lines 654--656
+Overfull \hbox (559.43864pt too wide) in paragraph at lines 670--672
 []\T1/ptm/m/n/10 EM for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .EM.normal
 (data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id,
  S, T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F) 
  []
 
 
-Overfull \hbox (865.21867pt too wide) in paragraph at lines 658--660
+Overfull \hbox (865.21867pt too wide) in paragraph at lines 674--676
 []\T1/ptm/m/n/10 ER for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .ER.normal
 (data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(da
 ta), s.counts, s.id, S, missing.items, nb.missing.items, start.mean=rep(0,p),st
@@ -851,57 +821,44 @@ art.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06)
  []
 
 [13] [14] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [15]
-Overfull \hbox (369.78088pt too wide) in paragraph at lines 797--797
- []\T1/zi4/m/n/10 POEM(data, weights, outind, errors, missing.matrix, alpha = 0
-.5, beta = 0.5, reweight.out = FALSE, c = 5, preliminary.mean.imputation = FALS
-E, monitor=FALSE)[] 
- []
-
-[16] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [17] [18]
-Overfull \hbox (25.33813pt too wide) in paragraph at lines 928--929
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [16] [17]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [18]
+Overfull \hbox (25.33813pt too wide) in paragraph at lines 946--947
 []\T1/ptm/m/n/10 The sam-pling weight \T1/zi4/m/n/10 weight \T1/ptm/m/n/10 is a
 d-justed for non-response in the stra-tum, i.e. \T1/zi4/m/n/10 weight=popsize/s
 ampsize\T1/ptm/m/n/10 . 
  []
 
 
-Overfull \hbox (11.01701pt too wide) in paragraph at lines 932--933
+Overfull \hbox (11.01701pt too wide) in paragraph at lines 950--951
 []\T1/ptm/m/n/10 Swiss Fed-eral Sta-tis-ti-cal Of-fice (1996), Umweltaus-gaben 
 und -investitionen in der Schweiz 1992/1993,
  []
 
 
-Overfull \hbox (9.77673pt too wide) in paragraph at lines 934--936
+Overfull \hbox (9.77673pt too wide) in paragraph at lines 952--954
 \T1/ptm/m/n/10 Eu-redit project, un-pub-lished manuscript avail-able from Eu-ro
 -stat and http://www.cs.york.ac.uk/euredit/ 
  []
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-)
-Overfull \hbox (319.78088pt too wide) in paragraph at lines 959--959
- []\T1/zi4/m/n/10 TRC(data, weights, overlap = 3, mincor = 0, robust.regression
- = "rank", gamma = 0.5, prob.quantile = 0.75, alpha = 0.05, md.type = "m", moni
-tor = F)[] 
- []
-
-[19] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [20]
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [19] [20]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
 ) [21]
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
-File: utf8.def 2008/04/05 v1.1m UTF-8 support for inputenc
-) [22] [23]
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.ind
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
+) [22] [23] (Rd2.ind
 [24]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 3.
@@ -913,29 +870,28 @@ LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
 [25
 
 ])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1192.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 1192.
-
-(C:\Users\BEAT~1.HUL\AppData\Local\Temp\RtmpiwMQel\Rd2pdf1d04532349ca\Rd2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1192.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1192.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 1211.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 1211.
+ (Rd2.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 1211.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 1211.
 
 Package rerunfilecheck Info: File `Rd2.out' has not changed.
-(rerunfilecheck)             Checksum: 5F132D1CBAF561F13D0151D3AE6147C8;811.
+(rerunfilecheck)             Checksum: 007D4073038D86E552B1D2E4BAF03F8F;811.
 
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1192.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1211.
  ) 
 Here is how much of TeX's memory you used:
- 6557 strings out of 493706
- 94770 string characters out of 3144631
- 171359 words of memory out of 3000000
- 9550 multiletter control sequences out of 15000+200000
+ 6549 strings out of 493673
+ 93425 string characters out of 3144007
+ 172555 words of memory out of 3000000
+ 9574 multiletter control sequences out of 15000+200000
  40674 words of font info for 49 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 38i,5n,27p,764b,558s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 38i,6n,27p,695b,592s stack positions out of 5000i,500n,10000p,200000b,50000s
 pdfTeX warning (dest): name{Rfn.imp.norm} has been referenced but does not ex
 ist, replaced by a fixed one
 
@@ -966,7 +922,7 @@ cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
 onts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
 mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on Rd2.pdf (25 pages, 234009 bytes).
+Output written on Rd2.pdf (25 pages, 235059 bytes).
 PDF statistics:
  512 PDF objects out of 1000 (max. 8388607)
  197 named destinations out of 1000 (max. 500000)

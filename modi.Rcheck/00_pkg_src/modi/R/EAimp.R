@@ -1,12 +1,10 @@
 EAimp <-
 function(data, weights , outind, reach="max",
          transmission.function = "root", power=ncol(data), distance.type = "euclidean",
-          duration=5, 
-          maxl = 5, kdon=1, 
-         monitor = FALSE, 
+         duration=5, maxl = 5, kdon=1, monitor = FALSE, 
          threshold=FALSE, deterministic=TRUE, fixedprop=0 )
 {
-# EPIDEMIC Algorithm for Multivariate Outlier Detection
+# EPIDEMIC Algorithm for Multivariate Impuation 
 #
 # B\'eguin, C. and Hulliger, B. (2004) Multivariate outlier detection in incomplete survey data: 
 # the epidemic algorithm and transformed rank correlations, JRSS-A, 167, Part 2, pp. 275?294.
@@ -34,14 +32,18 @@ function(data, weights , outind, reach="max",
 	calc.time <- proc.time()[1]	
 ############ Dimensions ############
 #
-# use all data: complete non-responses are to be replaced completely (similar to outliers) 
+# use all data: complete non-responses are to be replaced 
+#	completely (similar to outliers) 
 #
 	n <- nrow(data)
 	p <- ncol(data)
 	if (missing(weights)) weights<-rep(1,n)
   if (missing(outind)) cat("No outlier indicator is given\n")
-  if (sum(is.na(outind))>0) cat("Outlier indicator contains missing values\n")
-  response<-!is.na(data)
+  if (sum(is.na(outind))>0) {
+    cat("Missing values in outlier indicator set to FALSE.\n")
+    outind[is.na(outind)] <- FALSE
+  }
+	response<-!is.na(data)
 	complete.records <- apply(response, 1, prod)
 	usable.records <- apply(response, 1, sum) >= p/2
 	cat("\n Dimensions (n,p):", n, p)

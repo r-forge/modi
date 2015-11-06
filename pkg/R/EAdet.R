@@ -96,8 +96,8 @@ cat("\n Transmission distance is ", EA.dist.res$output[3], "\n")
 		else start.point <- EA.dist.res$output[1]
 	}
 	time <- 1
-	infected <- rep(F, n)
-	infected[c(start.point)] <- T
+	infected <- rep(FALSE, n)
+	infected[c(start.point)] <- TRUE
 	new.infected <- infected
 	n.infected <- sum(infected)
 	hprod <- rep(1, n)
@@ -174,7 +174,7 @@ if (nfull>n) inf.time[new.indices]<-infection.time else inf.time<-infection.time
 inf.time[!infectednfull]<-NA
 # outliers full sample
 outlier<-(inf.time>=cutpoint) 
-outlier[is.na(outlier)]<-FALSE
+# outlier[is.na(outlier)]<-FALSE
 outlier.ind<-which(outlier)
 #
 
@@ -186,7 +186,7 @@ if(plotting)
   plot.time<-inf.time
   plot.time[!infectednfull] <- ceiling(1.2 * duration)
   ord <- order(plot.time)
-  plot(plot.time[ord],cumsum(weights[ord]), ylab = "(weighted) cdf of infection time")
+  plot(plot.time[ord],cumsum(weights[ord]), xlab="infection time",  ylab = "(weighted) cdf of infection time")
   abline(v=cutpoint)
 }  
 #
@@ -206,7 +206,7 @@ if(plotting)
 
 ############ Output ############
 #
-	cat("\n", "EA detection has finished with", n.infected, "infected points in", calc.time, "seconds.")
+	cat("\n", "EA detection has finished with", n.infected, "infected points in", calc.time[1], "seconds.")
 	#	cat("\n The results are in EAdet.r and EAdet.i", "\n")
 return(invisible(list(output=EAdet.r,
             infected = infectednfull, 

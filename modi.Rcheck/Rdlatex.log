@@ -1,4 +1,620 @@
 Hmm ... looks like a package
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit)
+entering extended mode
+(Rd2.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"))
+(C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\Rd.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\zi4.sty"
+`inconsolata-zi4' v1.05, 2014/06/22 Text macros for Inconsolata (msharpe)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg")
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty")
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"))
+Writing index file Rd2.idx
+No file Rd2.aux.
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd")
+(C:\Users\beat.hulliger\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\t1zi4.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [1{C:/Users/beat.hullig
+er/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (8.78088pt too wide) in paragraph at lines 92--92
+ []\T1/zi4/m/n/10 em.steps.start = 10, em.steps.loop = 5, better.estimation = F
+ALSE, monitor = FALSE)[] 
+[2] [3] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (161.86044pt too wide) in paragraph at lines 203--212
+[]\T1/ptm/m/n/10 bushfirem: \T1/zi4/m/n/10 set.seed(234567891) miss.rate <- 0.2
+ miss.ind<-rep(F,n*p) miss.ind[sample(n*p,floor(miss.rate*n*p))]<-T
+
+Overfull \hbox (61.78088pt too wide) in paragraph at lines 203--212
+\T1/zi4/m/n/10 bushmiss<-matrix(miss.ind,ncol=5) mean(bushmiss) bushfirem<-bush
+fire bushfirem[bushmiss]<-NA 
+
+Overfull \hbox (39.53938pt too wide) in paragraph at lines 213--215
+[]\T1/ptm/m/n/10 For test-ing pur-poses weights are pro-vided: \T1/zi4/m/n/10 b
+ushfire.weights<-rep(c(1,2,5),length=nrow(bushfire)) 
+[4] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (29.78088pt too wide) in paragraph at lines 244--244
+ []\T1/zi4/m/n/10 EAdet(data, weights, reach = "max", transmission.function = "
+root", power = ncol(data),[] 
+
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 262--267
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[5] [6] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [7]
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 383--388
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 392--393
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[8] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [9] [10]
+Overfull \hbox (49.38089pt too wide) in paragraph at lines 516--516
+ []\T1/zi4/m/n/9 det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,ste
+ps.output=TRUE,em.steps=100,tol=2e-6)[] 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [11]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [12]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (11.78088pt too wide) in paragraph at lines 649--651
+\T1/zi4/m/n/10 .EA.dist(data,n,p,weights,reach,transmission.function, power, di
+stance.type, maxl) 
+
+Overfull \hbox (164.33669pt too wide) in paragraph at lines 661--663
+[]\T1/ptm/m/n/10 Sum of weights for ob-ser-va-tions < value (if lt=T) or ob-ser
+-va-tions=value (if lt=F): \T1/zi4/m/n/10 .sum.weights(observations,weights,val
+ue,lt=TRUE) 
+
+Overfull \hbox (36.10774pt too wide) in paragraph at lines 667--669
+[]\T1/ptm/m/n/10 psi-function (de-fined in Lit-tle and Smith for ER al-go-rithm
+): \T1/zi4/m/n/10 .psi.lismi(d,present,psi.par=c(2,1.25)) 
+
+Overfull \hbox (559.43864pt too wide) in paragraph at lines 670--672
+[]\T1/ptm/m/n/10 EM for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .EM.normal
+(data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id,
+ S, T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F) 
+
+Overfull \hbox (865.21867pt too wide) in paragraph at lines 674--676
+[]\T1/ptm/m/n/10 ER for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .ER.normal
+(data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(da
+ta), s.counts, s.id, S, missing.items, nb.missing.items, start.mean=rep(0,p),st
+art.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06) 
+[13] [14] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [15]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [16] [17]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [18]
+Overfull \hbox (25.33813pt too wide) in paragraph at lines 946--947
+[]\T1/ptm/m/n/10 The sam-pling weight \T1/zi4/m/n/10 weight \T1/ptm/m/n/10 is a
+d-justed for non-response in the stra-tum, i.e. \T1/zi4/m/n/10 weight=popsize/s
+ampsize\T1/ptm/m/n/10 . 
+
+Overfull \hbox (11.01701pt too wide) in paragraph at lines 950--951
+[]\T1/ptm/m/n/10 Swiss Fed-eral Sta-tis-ti-cal Of-fice (1996), Umweltaus-gaben 
+und -investitionen in der Schweiz 1992/1993,
+
+Overfull \hbox (9.77673pt too wide) in paragraph at lines 952--954
+\T1/ptm/m/n/10 Eu-redit project, un-pub-lished manuscript avail-able from Eu-ro
+-stat and http://www.cs.york.ac.uk/euredit/ 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [19] [20]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [21]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [22] [23]
+No file Rd2.ind.
+[24] (Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{Rfn.imp.norm} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.weighted.mean} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.svyquantile} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mahalanobis} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.norm} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.cov.mcd} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/
+MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}<C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (24 pages, 212158 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [MiKTeX 2.9 64-bit] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (61 entries accepted, 0 rejected).
+Sorting entries....done (414 comparisons).
+Generating output file Rd2.ind....done (106 lines written, 0 warnings).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit)
+entering extended mode
+(Rd2.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"))
+(C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\Rd.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\zi4.sty"
+`inconsolata-zi4' v1.05, 2014/06/22 Text macros for Inconsolata (msharpe)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg")
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty")
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"))
+Writing index file Rd2.idx
+(Rd2.aux) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd")
+(C:\Users\beat.hulliger\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"))
+(Rd2.out) (Rd2.out) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\t1zi4.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd") (Rd2.toc)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [1{C:/Users/beat.hullig
+er/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [2]
+Overfull \hbox (8.78088pt too wide) in paragraph at lines 92--92
+ []\T1/zi4/m/n/10 em.steps.start = 10, em.steps.loop = 5, better.estimation = F
+ALSE, monitor = FALSE)[] 
+[3] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [4]
+Overfull \hbox (161.86044pt too wide) in paragraph at lines 203--212
+[]\T1/ptm/m/n/10 bushfirem: \T1/zi4/m/n/10 set.seed(234567891) miss.rate <- 0.2
+ miss.ind<-rep(F,n*p) miss.ind[sample(n*p,floor(miss.rate*n*p))]<-T
+
+Overfull \hbox (61.78088pt too wide) in paragraph at lines 203--212
+\T1/zi4/m/n/10 bushmiss<-matrix(miss.ind,ncol=5) mean(bushmiss) bushfirem<-bush
+fire bushfirem[bushmiss]<-NA 
+
+Overfull \hbox (39.53938pt too wide) in paragraph at lines 213--215
+[]\T1/ptm/m/n/10 For test-ing pur-poses weights are pro-vided: \T1/zi4/m/n/10 b
+ushfire.weights<-rep(c(1,2,5),length=nrow(bushfire)) 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (29.78088pt too wide) in paragraph at lines 244--244
+ []\T1/zi4/m/n/10 EAdet(data, weights, reach = "max", transmission.function = "
+root", power = ncol(data),[] 
+
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 262--267
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+[5]
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[6] [7] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 383--388
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 392--393
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[8] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [9] [10]
+Overfull \hbox (49.38089pt too wide) in paragraph at lines 516--516
+ []\T1/zi4/m/n/9 det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,ste
+ps.output=TRUE,em.steps=100,tol=2e-6)[] 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [11]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [12]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (11.78088pt too wide) in paragraph at lines 649--651
+\T1/zi4/m/n/10 .EA.dist(data,n,p,weights,reach,transmission.function, power, di
+stance.type, maxl) 
+
+Overfull \hbox (164.33669pt too wide) in paragraph at lines 661--663
+[]\T1/ptm/m/n/10 Sum of weights for ob-ser-va-tions < value (if lt=T) or ob-ser
+-va-tions=value (if lt=F): \T1/zi4/m/n/10 .sum.weights(observations,weights,val
+ue,lt=TRUE) 
+
+Overfull \hbox (36.10774pt too wide) in paragraph at lines 667--669
+[]\T1/ptm/m/n/10 psi-function (de-fined in Lit-tle and Smith for ER al-go-rithm
+): \T1/zi4/m/n/10 .psi.lismi(d,present,psi.par=c(2,1.25)) 
+
+Overfull \hbox (559.43864pt too wide) in paragraph at lines 670--672
+[]\T1/ptm/m/n/10 EM for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .EM.normal
+(data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id,
+ S, T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F) 
+
+Overfull \hbox (865.21867pt too wide) in paragraph at lines 674--676
+[]\T1/ptm/m/n/10 ER for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .ER.normal
+(data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(da
+ta), s.counts, s.id, S, missing.items, nb.missing.items, start.mean=rep(0,p),st
+art.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06) 
+[13] [14] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [15]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [16] [17]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [18]
+Overfull \hbox (25.33813pt too wide) in paragraph at lines 946--947
+[]\T1/ptm/m/n/10 The sam-pling weight \T1/zi4/m/n/10 weight \T1/ptm/m/n/10 is a
+d-justed for non-response in the stra-tum, i.e. \T1/zi4/m/n/10 weight=popsize/s
+ampsize\T1/ptm/m/n/10 . 
+
+Overfull \hbox (11.01701pt too wide) in paragraph at lines 950--951
+[]\T1/ptm/m/n/10 Swiss Fed-eral Sta-tis-ti-cal Of-fice (1996), Umweltaus-gaben 
+und -investitionen in der Schweiz 1992/1993,
+
+Overfull \hbox (9.77673pt too wide) in paragraph at lines 952--954
+\T1/ptm/m/n/10 Eu-redit project, un-pub-lished manuscript avail-able from Eu-ro
+-stat and http://www.cs.york.ac.uk/euredit/ 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [19] [20]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [21]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [22] [23] (Rd2.ind
+[24]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 52.
+
+[25]) (Rd2.aux)
+
+Package rerunfilecheck Warning: File `Rd2.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{Rfn.imp.norm} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.weighted.mean} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.svyquantile} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mahalanobis} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.norm} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.cov.mcd} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/
+MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}<C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (25 pages, 234318 bytes).
+Transcript written on Rd2.log.
+This is makeindex, version 2.15 [MiKTeX 2.9 64-bit] (kpathsea + Thai support).
+Scanning input file Rd2.idx....done (61 entries accepted, 0 rejected).
+Sorting entries....done (414 comparisons).
+Generating output file Rd2.ind....done (106 lines written, 1 warning).
+Output written in Rd2.ind.
+Transcript written in Rd2.ilg.
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit)
+entering extended mode
+(Rd2.tex
+LaTeX2e <2015/01/01> patch level 2
+Babel <3.9m> and hyphenation patterns for 69 languages loaded.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\book.cls"
+Document Class: book 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\bk10.clo"))
+(C:/PROGRA~1/R/R-32~1.2/share/texmf/tex/latex\Rd.sty
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ifthen.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\longtable.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\bm.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\textcomp.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\fontenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.def"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\times.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\zi4.sty"
+`inconsolata-zi4' v1.05, 2014/06/22 Text macros for Inconsolata (msharpe)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\color.cfg")
+("C:\Program Files\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty")
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty")))
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"))
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"))
+
+Package hyperref Message: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"))
+
+Package hyperref Warning: Option `hyperindex' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+
+Package hyperref Warning: Option `pagebackref' has already been used,
+(hyperref)                setting the option has no effect on input line 366.
+
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\makeidx.sty")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\t1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ot1enc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\omsenc.dfu")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1enc.dfu"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def"))
+Writing index file Rd2.idx
+(Rd2.aux) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd")
+(C:\Users\beat.hulliger\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"))
+(Rd2.out) (Rd2.out) ("C:\Program Files\MiKTeX 2.9\tex\latex\base\latin1.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\inconsolata\t1zi4.fd")
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1phv.fd") (Rd2.toc)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [1{C:/Users/beat.hullig
+er/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [2]
+Overfull \hbox (8.78088pt too wide) in paragraph at lines 92--92
+ []\T1/zi4/m/n/10 em.steps.start = 10, em.steps.loop = 5, better.estimation = F
+ALSE, monitor = FALSE)[] 
+[3] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [4]
+Overfull \hbox (161.86044pt too wide) in paragraph at lines 203--212
+[]\T1/ptm/m/n/10 bushfirem: \T1/zi4/m/n/10 set.seed(234567891) miss.rate <- 0.2
+ miss.ind<-rep(F,n*p) miss.ind[sample(n*p,floor(miss.rate*n*p))]<-T
+
+Overfull \hbox (61.78088pt too wide) in paragraph at lines 203--212
+\T1/zi4/m/n/10 bushmiss<-matrix(miss.ind,ncol=5) mean(bushmiss) bushfirem<-bush
+fire bushfirem[bushmiss]<-NA 
+
+Overfull \hbox (39.53938pt too wide) in paragraph at lines 213--215
+[]\T1/ptm/m/n/10 For test-ing pur-poses weights are pro-vided: \T1/zi4/m/n/10 b
+ushfire.weights<-rep(c(1,2,5),length=nrow(bushfire)) 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (29.78088pt too wide) in paragraph at lines 244--244
+ []\T1/zi4/m/n/10 EAdet(data, weights, reach = "max", transmission.function = "
+root", power = ncol(data),[] 
+
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 262--267
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+[5]
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 275--276
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[6] [7] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (61.64977pt too wide) in paragraph at lines 383--388
+\T1/zi4/m/n/10 (beta*d+1)^(-p) \T1/ptm/m/n/10 for \T1/zi4/m/n/10 p=ncol(data) \
+T1/ptm/m/n/10 as de-fault, \T1/zi4/m/n/10 "root" \T1/ptm/m/n/10 is the func-tio
+n \T1/zi4/m/n/10 1-(1-d/d0)^(1/maxl) 
+
+Overfull \hbox (39.60794pt too wide) in paragraph at lines 392--393
+[]\T1/ptm/m/n/10 Infect all re-main-ing points with in-fec-tion prob-a-bil-ity 
+above the thresh-old \T1/zi4/m/n/10 1-0.5^(1/maxl) 
+[8] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [9] [10]
+Overfull \hbox (49.38089pt too wide) in paragraph at lines 516--516
+ []\T1/zi4/m/n/9 det.res<-ER(bushfirem, weights=bushfire.weights,alpha=0.05,ste
+ps.output=TRUE,em.steps=100,tol=2e-6)[] 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [11]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [12]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+Overfull \hbox (11.78088pt too wide) in paragraph at lines 649--651
+\T1/zi4/m/n/10 .EA.dist(data,n,p,weights,reach,transmission.function, power, di
+stance.type, maxl) 
+
+Overfull \hbox (164.33669pt too wide) in paragraph at lines 661--663
+[]\T1/ptm/m/n/10 Sum of weights for ob-ser-va-tions < value (if lt=T) or ob-ser
+-va-tions=value (if lt=F): \T1/zi4/m/n/10 .sum.weights(observations,weights,val
+ue,lt=TRUE) 
+
+Overfull \hbox (36.10774pt too wide) in paragraph at lines 667--669
+[]\T1/ptm/m/n/10 psi-function (de-fined in Lit-tle and Smith for ER al-go-rithm
+): \T1/zi4/m/n/10 .psi.lismi(d,present,psi.par=c(2,1.25)) 
+
+Overfull \hbox (559.43864pt too wide) in paragraph at lines 670--672
+[]\T1/ptm/m/n/10 EM for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .EM.normal
+(data, weights=rep(1,nrow(data)), n=sum(weights) ,p=ncol(data), s.counts, s.id,
+ S, T.obs, start.mean=rep(0,p),start.var=diag(1,p),numb.it=10,Estep.output=F) 
+
+Overfull \hbox (865.21867pt too wide) in paragraph at lines 674--676
+[]\T1/ptm/m/n/10 ER for mul-ti-vari-ate nor-mal data: \T1/zi4/m/n/10 .ER.normal
+(data, weights=rep(1,nrow(data)), psi.par=c(2,1.25), np=sum(weights) ,p=ncol(da
+ta), s.counts, s.id, S, missing.items, nb.missing.items, start.mean=rep(0,p),st
+art.var=diag(1,p),numb.it=10,Estep.output=F,tolerance=1e-06) 
+[13] [14] ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [15]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [16] [17]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [18]
+Overfull \hbox (25.33813pt too wide) in paragraph at lines 946--947
+[]\T1/ptm/m/n/10 The sam-pling weight \T1/zi4/m/n/10 weight \T1/ptm/m/n/10 is a
+d-justed for non-response in the stra-tum, i.e. \T1/zi4/m/n/10 weight=popsize/s
+ampsize\T1/ptm/m/n/10 . 
+
+Overfull \hbox (11.01701pt too wide) in paragraph at lines 950--951
+[]\T1/ptm/m/n/10 Swiss Fed-eral Sta-tis-ti-cal Of-fice (1996), Umweltaus-gaben 
+und -investitionen in der Schweiz 1992/1993,
+
+Overfull \hbox (9.77673pt too wide) in paragraph at lines 952--954
+\T1/ptm/m/n/10 Eu-redit project, un-pub-lished manuscript avail-able from Eu-ro
+-stat and http://www.cs.york.ac.uk/euredit/ 
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [19] [20]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [21]
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def")
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def") [22] [23] (Rd2.ind
+[24]
+
+LaTeX Font Warning: Font shape `T1/zi4/m/it' undefined
+(Font)              using `T1/zi4/m/n' instead on input line 52.
+
+[25]) (Rd2.aux)
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+ )
+(see the transcript file for additional information)pdfTeX warning (dest): name
+{Rfn.imp.norm} has been referenced but does not exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.weighted.mean} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.svyquantile} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.mahalanobis} has been referenced but does not e
+xist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.norm} has been referenced but does not exist, r
+eplaced by a fixed one
+
+pdfTeX warning (dest): name{Rfn.cov.mcd} has been referenced but does not exist
+, replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}{C:/Program Files/
+MiKTeX 2.9/fonts/enc/dvips/inconsolata/i4-t1-0.enc}<C:/Program Files/MiKTeX 2.9
+/fonts/type1/public/inconsolata/Inconsolata-zi4r.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmr10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/helvetic/uhvr8a.pfb><C:/Program F
+iles/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/f
+onts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/ti
+mes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+Output written on Rd2.pdf (25 pages, 235059 bytes).
+Transcript written on Rd2.log.
 Saving output to 'modi-manual.pdf' ...
 Done
-You may want to clean up by 'rm -rf C:/Users/BEAT~1.HUL/AppData/Local/Temp/RtmpiwMQel/Rd2pdf1d04532349ca'
+You may want to clean up by 'rm -rf C:/Users/BEAT~1.HUL/AppData/Local/Temp/Rtmp2tqhdI/Rd2pdf50850d54535'
