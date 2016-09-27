@@ -8,7 +8,7 @@ GIMCD <-
 #
 	calc.time <- proc.time()
 	
-    if (missing(seedem)) seedem <- 234567819
+    if (missing(seedem)) seedem <- 23456789
 	  rngseed(seedem)
     if (!is.matrix(data)) data<-as.matrix(data)
     if (alpha<0.5) alpha<-1-alpha
